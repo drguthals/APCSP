@@ -10,7 +10,7 @@
 @unit-lessons{
 @lesson/studteach[
       #:title "Introduction to Pyret"
-      #:duration "50 minutes"
+      #:duration "30 minutes"
       #:overview ""
       #:learning-objectives @itemlist[]
       #:evidence-statements @itemlist[]
@@ -38,9 +38,11 @@
                          @teacher{}}  
                @point{@student{Open the @editor-link[#:public-id "0B9rKDmABYlJVdHZESmZ6ZnRmdXc" "Review file"] in a new window. The first thing you’ll notice is that we’re no longer using WeScheme to edit our programs, although the Pyret editor behaves very similarly. The definitions area (where you write code you want to save for later) is on the left side of the screen, and the interactions area (where you write code you just want to test out once, like scratch paper) is on the right. The top of the editor has space to write a name for your program, and the “Run” button at the top right will clear the interactions area and run whatever program is written in the definitions area.}
                        @teacher{}}
-               @point{@student{@activity[#:forevidence (list "BS-IDE&1&1")]{@itemlist[@item{What are the names of the variables defined here? What are their values?}
+               @point{@student{The first line of code here will be new to you: Since Pyret has a lot more functions than we used in Bootstrap:1 in Racket, to keep things simple we’ve grouped some of these functions into @vocab{libraries}. The line @code{include image} tells Pyret to load all of the functions from the image library for use in this file, so we can use familiar functions like star, triangle, rectangle, scale, rotate, and more.
+                               
+                               @activity[#:forevidence (list "BS-IDE&1&1")]{@itemlist[@item{What are the names of the variables defined in this file? What are their values?}
                                                           @item{What would you get back if you were to evaluate each of those variables in the Interactions area? Take a guess first, then click "Run" and type the name of each variable into the interactions area. Were your guesses correct?}]
-                                                 Look at the variable @code{OUTLINE} on line 18.
+                                                 Look at the variable @code{OUTLINE} on line 16.
                                                  @itemlist[@item{What shape will this draw?}
                                                            @item{How big do you think it will be?}
                                                            @item{Will it be solid or outline?}
@@ -80,16 +82,16 @@
                 )
       ]{
           @points[
-                  @point{@student{It's important to keep track of how functions work, and Bootstrap:1 introduced the idea of @vocab{Contracts}. The contract for the @code{star} function is shown below. @code[#:multi-line ""]{; star: Number String String -> Image}
+                  @point{@student{It's important to keep track of how functions work, and Bootstrap:1 introduced the idea of @vocab{Contracts}. The contract for the @code{star} function is shown below. @code[#:multi-line ""]{# star: Number String String -> Image}
 Contracts summarize three pieces of essential information about a function: 
 @itemlist[@item{The @vocab{Name} of the function: in this case, @code{star}.}
                     @item{The @vocab{Domain} of a function, which is the type(s) of data that the function expects. In this case, a Number and two Strings.}    
                     @item{The @vocab{Range} of this function, which is the type of data that the function produces: In this case, an Image!}]
 @bannerline{Every contract has three parts: Name, Domain and Range!}
 A contract is a note we write to ourselves about how to use the function. Just as in Bootstrap:1, it will be helpful to keep track of the contracts for each function you learn about. The last page in your workbook has a table labeled "Contracts," where you can (and should!) copy down each contract as you learn it.
-Contracts in Pyret are just as important as they are in Racket, and are written the same way. You write contracts as comments: pieces of text for humans only, which are ignored by the computer. In Racket we used a @code{;} before Contracts, but in Pyret, just put a @code{#} before a line of text to turn it into a comment!
+Contracts in Pyret are just as important as they are in Racket, and are written the same way. You write contracts as comments: pieces of text for humans only, which are ignored by the computer. In Racket we used a @code{;} (semicolon) before Contracts, but in Pyret, just put a @code{#} (pound sign, or octothorpe) before a line of text to turn it into a comment!
 @activity[#:forevidence (list "BS-PL.2&1&1")]{The Contract for @code{+} is shown below.
-          @code[#:multi-line ""]{# +: Number Number -> Number}                
+          @code[#:multi-line ""]{#  +  : Number Number -> Number}                
 Write down the Contracts for @code{*}, @code{-}, @code{/} and @code{num-sqrt} in your Contracts page. (You know @code{num-sqrt} as the @code{sqrt} function in Racket!)}
 One notable difference between Racket and Pyret is that Pyret requires commas between each input to a function. So, @code{circle(50 “solid” “red”)} will return an error message, because you need commas between each input. @code{circle(50, “solid”, “red”)} is the correct code. Keep this in mind as you write your programs!}                             
        @teacher{Emphasize to students that a function's contract can tell you a LOT about that function. It may also be useful to ask them to articulate reasons why Contracts are a good thing, so they are able to say it in their own voice. Make sure they write every contract down in their workbooks!}}
@@ -120,7 +122,7 @@ One notable difference between Racket and Pyret is that Pyret requires commas be
       ]{
           @points[@point{@student{Now you know how to define values in Pyret, and you know how to use Contracts for pre-built functions. But what about defining functions of your own? In Bootstrap:1, you used a tool called the @vocab{Design Recipe} to define functions from word problems. Let’s review the steps of the Design Recipe in Pyret. 
                                   @activity{Turn to @worksheet-link[#:page 3 #:name "Fast-Functions"] in your workbook.}
-                                  Here we have a function definition: @code[#:multi-line #t]{# double: Number -> Number
+                                  Here we have a function definition: @code[#:multi-line #t]{# double : Number -> Number
                                                                                              examples:
                                                                                                  double(5) is 2 * 5
                                                                                                  double(7) is 2 * 7
@@ -137,7 +139,7 @@ One notable difference between Racket and Pyret is that Pyret requires commas be
                                                        @item{What do you think this function does? What would be a good @vocab{Purpose Statement} for this function?}
                                                        ]}
                                   The @vocab{Contract} is a way of thinking about the function in a general way, without having to worry about exactly how it will work or how it will be used. By starting with simple questions such as these, later steps will be @bold{much} easier to think about.}
-                          @teacher{Review the importance of definitions for students (Defining values helps cut down on redundancy and makes future changes easier, defining functions allows for simplicity and testability. Be sure to use vocabulary - Contract, Domain, Range, Example, etc. - regularly and carefully, pushing students to use the proper terms throughout.) The Design Recipe is a useful tool for having students think about word problems and break them down into smaller parts (Contract, purpose statement, examples, and code). Instead of jumping into writing a function, students should first note what data types the fuction will take in and produce, and practice using their own words to describe what the function does. After this step, the Contract and Purpose Statement can be relied on to write examples for the function.}}
+                          @teacher{Review the importance of definitions for students (Defining values helps cut down on redundancy and makes future changes easier, defining functions also allows for simplicity and testability.) Be sure to use vocabulary - Contract, Domain, Range, Example, etc. - regularly and carefully, pushing students to use the proper terms throughout. The Design Recipe is a useful tool for having students think about word problems and break them down into smaller parts (Contract, purpose statement, examples, and code). Instead of jumping into writing a function, students should first note what data types the fuction will take in and produce, and practice using their own words to describe what the function does. After this step, the Contract and Purpose Statement can be relied on to write examples for the function.}}
                    
                   @point{@student{@bannerline{Step 2: Give Examples}
                                    In Bootstrap:1 you wrote EXAMPLES for every function, to show how the function could be used with some inputs. Those examples also worked to test your function, and would give you error messages if the expected result didn’t match the result produced by the function body. Pyret has the same thing, but written differently. Here are our examples for the function @code{double}:
@@ -173,7 +175,48 @@ Once you’ve defined the function itself, Pyret will automatically check your e
           @point{@student{For some extra practice with Pyret syntax, turn to @worksheet-link[#:page 6 #:name "Bug Hunting"] in your workbook and see if you can spot the bugs in the Pyret code in the left column. Circle each error (some sections might have more than one!), and then write the correct code in the right column.}
                  @teacher{Students will make syntax errors when learning any new language. This workbook page is intended to give them practice finding syntax bugs on paper first, to help identify the same bugs while typing later on.}}
           }]}
-                                               
+       
+@lesson/studteach[
+     #:title "Images in Pyret"
+     #:duration "20 minutes"
+     #:overview ""
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[@item{The @editor-link[#:public-id "0B9rKDmABYlJVaVpta3FVc0wydG8" "Take a hike!"] Starter file preloaded on students' machines.}]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{@points[@point{@student{You'll be working with a lot of animations in Bootstrap:2. In Bootstrap:1, the way your game characters moved and where they were placed on the screen was mostly determined for you. In this course, you have all the control over your animation. To start, let's practice making static scenes: images with no animation. Do you remember the @code{put-image} function from Racket? Pyret has the same function, and its contract should look familiar:  @code[#:multi-line #t]{# put-image : Image, Number, Number, Image -> Image}.
+                               @activity{@itemlist[@item{Open the @editor-link[#:public-id "0B9rKDmABYlJVaVpta3FVc0wydG8" "Take a hike!"] starter file.}
+                                                   @item{At the beginning of the file, we've provided you with a few image values. What are their names?}
+                                                   @item{Try typing @code{HIKER1} into the interactions area. What do you see?}
+                                                   @item{Look below the line that says @code{# Creating a scene}. What is the name of the value defined here?}
+                                                   @item{What data type is @code{SCENE}? How do you know?}]}
+                               This piece of code uses the @code{put-image} function to place the image of the boat onto the @code{BACKGROUND} at the coordinates 750, 200. To find out the best place to put the image of the boat, first we had to find out how large the background image was. Two functions help with this:  @code[#:multi-line #t]{# image-width : Image -> Number}, which returns the width of the given image (in pixels), and   @code[#:multi-line #t]{# image-height : Image -> Number}, which returns the height of the given image.
+                               @activity{Try evaluating @code{image-width(BACKGROUND)} in the interactions area to find the total width of the background.}}
+                        @teacher{}}
+                 @point{@student{Since the range of @code{put-image} is an image, the expression @code{put-image(BOAT, 750, 200, BACKGROUND)} will evaluate to an image. If we then want to put the image of a hiker onto @italic{this} image (like creating a collage), we can do that by nesting expressions using the @code{put-image} function. 
+                          @code[#:multi-line #t]{put-image(HIKER1, 700, 500, put-image(BOAT, 750, 200, BACKGROUND))}
+                          @activity{Now it's time to create your own scene. To start,
+                                    @itemlist[@item{Place both hikers onto the mountains.}
+                                              @item{Get some perspective: scale the image of the hiker higher on the mountain, so they appear smaller than the other hiker.}
+                                              @item{Find your own images to add to the scene using the @code{image-url} function. (This works just like the @code{bitmap/url} function from Bootstrap:1. 
+                                    @code{# image-url : String -> Image}}]
+                                    }
+                                    @bold{Hint:} Recall the image manipulation functions you used in Bootstrap:1. These may come in handy! @itemlist[@item{# scale : Number Image -> Image}
+                                   @item{# rotate : Number Image -> Image}]
+                                    }
+                         @teacher{In the upcoming lessons, students will be creating their own scenes from scratch, and then animating them. This activity is meant to familiarize students with the @code{put-image} function, and have them practice placing, moving, and scaling images onto a background. Once students have copied the necessary contracts into their workbook, this activity could be assigned for homework, or completed as an in-class activity.}
+                         }
+                 ]
+         }
+                         
+                                
 @lesson/studteach[
      #:title "Closing"
      #:duration "5 minutes"
