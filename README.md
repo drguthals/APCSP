@@ -1,10 +1,10 @@
-This is the repository for Bootstrap 1 materials.
+This is the repository for Bootstrap 1 materials. This was taken from the original Boostrap repository (https://github.com/bootstrapworld/curr) and copied into this new repository to adapt to APCSP in December 2016.
 
-Contributors:
+This codebase is maintained by:
+Sarah Guthals
+Beth Simon
 
-TESTTest
-
-The following contributors worked on converting this material in the
+The following contributors worked on converting the original Bootstrap material in the
 summer of 2012 at Brown University:
 
   Daniel Kocoj
@@ -17,7 +17,7 @@ summer of 2012 at Brown University:
   Katherine Ng
 
 
-After the summer, this codebase has been maintained by:
+After the summer, the original Bootstrap codebase has been maintained by:
 
   Emmanuel Schanzer
   Kathi Fisler
@@ -30,15 +30,18 @@ After the summer, this codebase has been maintained by:
 
 Installation:
 
+Install Racket: https://docs.racket-lang.org/pollen/Installation.html
+NOTE: Mac and Linux users will have to add the Racket bin location to your PATH variable.
+
 1.  Set up curr as a Racket collection.
 
-    Go to the parent directory of curr, and do the following:
+    Go to the parent directory of APCSP, and do the following:
 
-    $ raco link curr
+    $ raco link APCSP
 
 
-2.  Run build.rkt to generate the curriculum.  You can do this either
-at the command line, or from DrRacket.
+2.  Go into the APCSP directory and run build.rkt to generate the curriculum.  You can do this either
+at the command line, or from DrRacket. 
 
     $ racket build.rkt
 
