@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(define exprs '((> (+ 4 5) 9)
                  ;(or (> 10 11) (<= 7 9))

@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @title{Supplemental Lessons}
 
@@ -13,10 +13,10 @@
 
 @unit-lessons{
               
-@(include-lesson (lib "curr/lessons/Manipulating-Images/lesson/lesson.scrbl"))
-@(include-lesson (lib "curr/lessons/Making-Flags/lesson/lesson.scrbl"))
-@(include-lesson (lib "curr/lessons/Function-Example-Red-Shape/lesson/lesson.scrbl"))
-@(include-lesson (lib "curr/lessons/Structs/lesson/lesson.scrbl"))
-@(include-lesson (lib "curr/lessons/Simple-Ideas/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Manipulating-Images/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Making-Flags/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Function-Example-Red-Shape/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Structs/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Simple-Ideas/lesson/lesson.scrbl"))
 
 }

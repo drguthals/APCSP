@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @; Unit 5
 @(assess-design-recipe "circle-area" 
                        "Write a function that returns the area of a circle given its diameter."

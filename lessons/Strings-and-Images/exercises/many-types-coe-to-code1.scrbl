@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(define exprs '(;(rotate 20 (triangle (- 45 6) "solid" "gold"))
                  ;(scale (+ 4 6) (rectangle 5 8 "outline" "pink"))

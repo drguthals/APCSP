@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(define exprs '((- (+ 17 16) (* 13 17))
                  (+ (* 12 5) 24)

@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @; Unit 6
 @(assess-design-recipe "enough-cash?" 
                        "You go the store with $1.50 in your pocket. Write a function which takes in the price of an item and returns true if you have enough money to buy the item and false if you do not."

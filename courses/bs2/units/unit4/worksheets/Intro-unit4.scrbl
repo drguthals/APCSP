@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @title{Review: define-struct}
 
 @worksheet{Last week we talked about a function that created new structs. For the structs below, what function would you use for each of the following?

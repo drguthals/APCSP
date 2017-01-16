@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @; Unit 5
 @(assess-design-recipe "check-total" 
                        "It is customary to tip 20% on a bill at a restaurant. Write a function that takes the

@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(design-recipe-exercise "distance" (list "Write a function distance, which takes FOUR inputs:"
 @(itemlist @(item "px: The x-coordinate of the player")

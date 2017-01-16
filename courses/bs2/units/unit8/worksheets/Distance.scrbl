@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @title{distance}
 @worksheet{
 @design-recipe-exercise["distance" "Write a function " @code{distance} ", which takes FOUR inputs:"]

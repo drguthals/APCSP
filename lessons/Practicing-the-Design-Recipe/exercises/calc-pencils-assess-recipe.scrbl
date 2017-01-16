@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(assess-design-recipe "calc-pencils" 
                        "All students are given five (5) pencils at the beginning of the school year.  

@@ -1,4 +1,4 @@
- #lang curr/lib
+ #lang APCSP/lib
 
 @(design-recipe-exercise "red-shape" "Write a function called red-shape, which takes in the name of a shape and draws that shape (solid and red).
  Add an else clause that produces a sensible output."

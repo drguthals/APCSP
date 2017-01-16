@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @; Unit 6
 @(assess-design-recipe "equal-length?" 
                        "Write a function that takes in two strings and returns true if their lengths are equal and false otherwise."

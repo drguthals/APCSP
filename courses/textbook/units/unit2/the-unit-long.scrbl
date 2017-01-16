@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @declare-tags[group pedagogy selftaught]
 
@@ -23,14 +23,14 @@ include other datatypes, including Strings and Images.
 }
 }
 
-@(include-lesson (lib "curr/lessons/Intro-to-Racket-and-Numbers/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Intro-to-Racket-and-Numbers/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Circles-of-Evaluation/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Circles-of-Evaluation/lesson/lesson.scrbl"))
                              
-@(include-lesson (lib "curr/lessons/Contracts/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Contracts/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Intro-to-Strings/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Intro-to-Strings/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Creating-Images/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Creating-Images/lesson/lesson.scrbl"))
 
 @copyright[]

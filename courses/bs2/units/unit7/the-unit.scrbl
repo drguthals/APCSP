@@ -1,7 +1,8 @@
-#lang curr/lib
+#lang APCSP/lib
+
+@title{Unit 7: Collision Detection}
 @declare-tags[]
 
-@title{Track: Making Pong}
 
 @unit-overview/auto[#:lang-table (list (list "Number" @code{+ - * / sqr sqrt expt})
                                        (list "String" @code{string-append string-length})
@@ -286,7 +287,33 @@ end
                 @pacing[#:type "challenge"]{@itemlist[@item{}]}
                 )
       ]{
+<<<<<<< HEAD
+        @points[@point{@student{Now that you've seen the work it takes to create Ninja Cat, you have a good idea about what is needed to create a complex game. For the next exercise, think about the @italic{simplest possible version of your game}. Once you have that working, you can add advanced features later on. How many characters will you have, and what will you need to have in your World? You can use Numbers to keep track of the score, or the characters' x- and y-coordinates. You can also store an Image in the world, so that your character can change the way they look or to swap out the background once the score reaches a certain level. Once you have a simple game, it's easy to add more pieces to the World. 
+@activity[#:forevidence (list "N-Q&1&1" "BS-M&1&1" "BS-M&1&2" "BS-M&1&3")]{@itemlist[@item{Turn to @worksheet-link[#:page 32 #:name "Game Brainstorming"] in your workbook.}
+                    @item{Start by drawing a sketch of what your game will look like at the very start, and another sketch of what it will look like @italic{one second} later, without user input. What elements move on their own?}
+                    @item{In the table below, list all the images you will need for your game.}
+                    @item{At the bottom of the page, list all the things that will have @italic{changed} from one moment to the next. What will you need to keep track of in your world structure? If something moves, will you need to keep track of its x-coordinate, y-coordinate, or both? Will you have a score that changes?}]}}
+                        @teacher{Remind students that for every single thing that changes in their game, they must have a field in their world structure for it.}}
+                 @point{@student{Now that you have a list of everything that changes, it’s time to turn them into a World structure.
+                                @activity[#:forevidence (list "N-Q&1&1" "BS-M&1&1" "BS-M&1&2" "BS-M&1&3" "BS-DS.1&1&4" "BS-DS.1&1&5"  "BS-DS.2&1&2")]{@itemlist[@item{Turn to @worksheet-link[#:page 33 #:name "Your World"] in your workbooks, and define your world structure, using the changeable things you wrote in the second table of your Game Design page.}
+                                                    @item{Underneath your world structure, define two example worlds called @code{worldA} and @code{worldB}.} 
+                                                    @item{Finally, write down the @vocab{dot-accessors} you will need to access the fields of @code{worldA}.}]}}
+                       @teacher{Have the class take turns telling their peers about their games. Most importantly, have them tell the class what they have in their World structure.
+@itemlist[@item{Make sure student names are on page 32}
+                   @item{Take page 32 itself, or take photos of page 32, to prep game images for the next unit.}
+                   @item{Images should be in PNG or GIF format. Background images should be 640x480, and character images should generally be 
+                         no larger than 200px in either dimension. Make sure that the character images have transparent backgrounds!}
+                   @item{TIP: use animated GIFs for the characters - not only does the animation make the game look a lot better, but these 
+                         images usually have transparent backgrounds to begin with.}]}
+                       }             
+                 ]
+         }
+       }
+
+       
+=======
         @points[
            @point{@student{You've got the beginnings of a very nice Pong game! What are some features you might want to add?}
                   @teacher{Let students brainstorm ideas. Some suggestions: keeping score, a game-over event, a splash screen...}}]}
 }
+>>>>>>> 4be5eca23b05ad37c29d87c80ea4bc34859f5075

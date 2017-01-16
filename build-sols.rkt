@@ -13,7 +13,7 @@
          racket/cmdline
          racket/path
          racket/file
-         (lib "curr/lib/system-parameters.rkt")
+         (lib "APCSP/lib/system-parameters.rkt")
          "lib/translate-pdfs.rkt"
          "lib/paths.rkt"
          scribble/render
@@ -31,7 +31,7 @@
 ;; with this build script.
 (define-namespace-anchor this-anchor)
 (define shared-modules (list 'scribble/render
-                             '(lib "curr/lib/system-parameters.rkt")))
+                             '(lib "APCSP/lib/system-parameters.rkt")))
 (define (make-fresh-document-namespace)
   (define ns (make-base-namespace))
   (for ([mod shared-modules])

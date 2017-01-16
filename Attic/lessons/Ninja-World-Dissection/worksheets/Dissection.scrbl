@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @title{Dissecting a Demo: Ninja World}
 @worksheet{

@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @declare-tags[group pedagogy selftaught]
 
 @title{The Design Recipe}
@@ -16,9 +16,9 @@ Students are introduced to the Design Recipe and apply it to simple problems.
                  (list "Image"  @code{rectangle circle triangle ellipse radial-star scale rotate put-image}))
 }
 
-@(include-lesson (lib "curr/lessons/Introducing-the-Design-Recipe/lesson/lesson.scrbl"))
-@(include-lesson (lib "curr/lessons/Practicing-the-Design-Recipe/lesson/lesson.scrbl"))
-@(include-lesson (lib "curr/lessons/Even-More-Practice-for-Design-Recipe/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Introducing-the-Design-Recipe/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Practicing-the-Design-Recipe/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Even-More-Practice-for-Design-Recipe/lesson/lesson.scrbl"))
 
 What you have learned is powerful: a structured way to approach solving any problem. 
 First you state the problem as clearly as you can, then think about the data. 

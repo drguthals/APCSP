@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @;apparent misalignment in second piece of each first example is intentional
 @;to make code render aligned once scribbled

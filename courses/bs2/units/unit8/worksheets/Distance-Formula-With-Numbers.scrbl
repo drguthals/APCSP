@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @title{The Distance Formula, with Numbers}
 @worksheet{

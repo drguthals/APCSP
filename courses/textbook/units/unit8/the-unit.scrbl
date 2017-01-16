@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @title{Unit 8: Collision Detection}
 
 @declare-tags[group pedagogy selftaught]
@@ -21,9 +21,9 @@ Students discuss and then prove the Pythagorean theorem, and use this theorem - 
                  (list "Boolean" @code{= > < string=? and or}))
 }
 
-@(include-lesson (lib "curr/lessons/Collision-Introduction/lesson/lesson.scrbl"))
-@(include-lesson (lib "curr/lessons/1D-Distance/lesson/lesson.scrbl"))
-@(include-lesson (lib "curr/lessons/Distance-Formula/lesson/lesson.scrbl"))
-@(include-lesson (lib "curr/lessons/Collision-Detection/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Collision-Introduction/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/1D-Distance/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Distance-Formula/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Collision-Detection/lesson/lesson.scrbl"))
 
 @copyright[]

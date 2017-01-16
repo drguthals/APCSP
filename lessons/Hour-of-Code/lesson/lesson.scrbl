@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @lesson/studteach[
      #:title "Introduction to Programming" 

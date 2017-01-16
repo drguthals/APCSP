@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @declare-tags[group pedagogy selftaught bootstrap]
 
 @title{Unit 7: Booleans and Conditionals}
@@ -35,16 +35,16 @@ Language Table
        @itemlist/splicing[
        @item{Review the previous material}]}
 
-@(include-lesson (lib "curr/lessons/Intro-to-Booleans/lesson/lesson-long.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Intro-to-Booleans/lesson/lesson-long.scrbl"))
 
-@(include-lesson (lib "curr/lessons/onscreen1/lesson/lesson-long.scrbl"))
+@(include-lesson (lib "APCSP/lessons/onscreen1/lesson/lesson-long.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Boolean-Function/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Boolean-Function/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/onscreen2/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/onscreen2/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Cond-Example-With-Pizza-Toppings/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Cond-Example-With-Pizza-Toppings/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Player-Movement/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Player-Movement/lesson/lesson.scrbl"))
 
 @copyright[]

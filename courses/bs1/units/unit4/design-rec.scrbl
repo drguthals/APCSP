@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @lesson[#:title "1.Contract:"]{@code{#:contract ""} @fill-in-the-blank[#:id "name" 
                                                    #:label "Name"]

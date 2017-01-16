@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @declare-tags[group pedagogy selftaught]
 
 @title{Functions}
@@ -16,9 +16,9 @@ Students learn where functions come from and how to define them.
                  (list "Image"  @code{rectangle circle triangle ellipse radial-star scale rotate put-image}))
 }
 
-@(include-lesson (lib "curr/lessons/Fast-Functions/lesson/lesson-long.scrbl"))
-@(include-lesson (lib "curr/lessons/Function-Example-Blue-Circle/lesson/lesson.scrbl"))
-@(include-lesson (lib "curr/lessons/Function-Example-Double/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Fast-Functions/lesson/lesson-long.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Function-Example-Blue-Circle/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Function-Example-Double/lesson/lesson.scrbl"))
 
 @copyright[]
 

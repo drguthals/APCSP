@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @title{Supplemental Lessons}
 
@@ -11,6 +11,6 @@
 
 @unit-lessons{
               
-@(include-lesson (lib "curr/lessons/Scoring-Levels/lesson/lesson.scrbl"))
-@(include-lesson (lib "curr/lessons/Nested-Structs/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Scoring-Levels/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Nested-Structs/lesson/lesson.scrbl"))
 }

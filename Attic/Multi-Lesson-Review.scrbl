@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @drill{
 Hey there, intrepid explorer! You're on a mission to get to Mars to help your Martian friends build a house. Let's go!

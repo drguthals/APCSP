@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @declare-tags[group pedagogy selftaught bootstrap]
 
 @title{Unit 6: Game Animation}
@@ -25,13 +25,13 @@ Students define functions that map position n to position n+1, allowing them to 
 @itemlist/splicing[@tag[pedagogy]{@item{If you have students tackle the bug-hunting activity, be aware that the file contains several bugs! Until students have fixed all of them, they will always get an error message when they attempt to run the file. This is by design, to encourage students to both read the error and to look at it's location.}}
           @tag[selftaught]{@item{If you tackle the bug-hunting activity, be aware that the file contains several bugs! Until you have fixed all of them, you will always get an error message when you attempt to run the file. This is by design, to encourage you to both read the error and to look at it's location.}}]}
 
-@(include-lesson (lib "curr/lessons/Danger-Movement/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Danger-Movement/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Target-Movement/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Target-Movement/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Fun-With-Movement/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Fun-With-Movement/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Projectile-Movement/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Projectile-Movement/lesson/lesson.scrbl"))
                                 
 
 

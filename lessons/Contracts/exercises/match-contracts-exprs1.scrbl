@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(define e1 (code "(big-star \"purple\")"))
 @(define c1 (code "; big-star : string -> image")) 
