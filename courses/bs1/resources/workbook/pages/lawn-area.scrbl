@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(design-recipe-exercise "lawn-area" "Use the Design Recipe to write a function 'lawn-area', which takes in the width and length of a lawn, and returns the area of the lawn. (Don't forget: area = length * width!)"
 			 #:domain-list (list "number" "number")

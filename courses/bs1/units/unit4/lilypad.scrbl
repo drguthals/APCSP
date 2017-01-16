@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @lesson[#:title "Question Three:"]{Take a few minutes to try and solve this brainteaser. Then move on to the problem on the next page.
 

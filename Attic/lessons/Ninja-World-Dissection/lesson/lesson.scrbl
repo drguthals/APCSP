@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @declare-tags[group pedagogy selftaught]
 @lesson[#:title "Ninja World"

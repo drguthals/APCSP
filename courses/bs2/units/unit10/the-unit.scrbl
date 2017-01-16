@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @title{Unit 10: Collision Detection and Completing Your Game}
 @declare-tags[]

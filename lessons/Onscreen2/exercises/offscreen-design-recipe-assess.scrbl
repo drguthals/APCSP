@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @; Unit 6
 @(assess-design-recipe "offscreen?" 
                        "Write a function, offscreen?, which returns true if Sam the butterfly's x-coordinate is less than -50 or greater than 690."

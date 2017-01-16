@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(define exprs '((and (string=? place "safe") 
                       (or (>= x 50) (<= y 2)))

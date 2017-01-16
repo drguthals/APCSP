@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @title{Drawing the START world}
 @worksheet{

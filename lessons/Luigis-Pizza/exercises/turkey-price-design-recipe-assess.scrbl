@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @; Unit 7
 @(assess-design-recipe "turkey-price" 
                        "The grocery store charges $2/pound for a turkey for the first 5 pounds, and then $1/pound for every 

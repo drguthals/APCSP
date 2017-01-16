@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @title{Dissect a Video Game and Design Your Own}
 
@@ -21,14 +21,14 @@ Students discuss the components of their favorite videogames, and discover that 
            ]
 }
 
-@(include-lesson (lib "curr/lessons/Ninja-Cat-Demo/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Ninja-Cat-Demo/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Ninja-Cat-Demo/lesson/lesson-long.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Ninja-Cat-Demo/lesson/lesson-long.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Coordinate-Planes/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Coordinate-Planes/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Ninja-Cat-Demo-Dissection/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Ninja-Cat-Demo-Dissection/lesson/lesson.scrbl"))
 
-@(include-lesson (lib "curr/lessons/Ninja-Cat-Demo-Brainstorming/lesson/lesson.scrbl"))
+@(include-lesson (lib "APCSP/lessons/Ninja-Cat-Demo-Brainstorming/lesson/lesson.scrbl"))
 
 @copyright[]

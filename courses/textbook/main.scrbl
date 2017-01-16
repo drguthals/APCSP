@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @(require 2htdp/image)
 @bitmap{bswlogo.png}
 @title{Bootstrap}

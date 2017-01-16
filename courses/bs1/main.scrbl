@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @main-contents{
 @(elem #:style bs-coursename-style "Bootstrap:1")

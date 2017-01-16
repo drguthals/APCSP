@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @title{Unit 7: Collision Detection}
 @declare-tags[]

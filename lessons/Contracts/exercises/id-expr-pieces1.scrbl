@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(define q1 (elem "How many " @vocab{arguments} " does the circle function take in" @code{(circle (* 3 10) "outline" "black")} "?"))
 @(define a1 "3")

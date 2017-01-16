@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(design-recipe-exercise "update-player" "Write a function called update-player, which takes in the player's y-coordinate and the name of the key pressed, and returns the new y-coordinate."
 			 #:domain-list (list "number" "string")

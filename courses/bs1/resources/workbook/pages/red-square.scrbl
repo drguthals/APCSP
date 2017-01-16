@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(design-recipe-exercise "red-square" "Use the Design Recipe to write a function 'red-square', which takes in a number (the length of each side of the square) and outputs a solid red rectangle whose length and width are the same size."
 			 #:domain-list (list "number")

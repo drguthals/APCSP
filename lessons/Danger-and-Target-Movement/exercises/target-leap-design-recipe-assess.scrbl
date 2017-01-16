@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 @; Unit 5
 @(assess-design-recipe "target-leap" 
                        "Write a function which takes in the target's x-coordinate and makes a player leap by returning an x-coordinate that is double the original x-coordinate."

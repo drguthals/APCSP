@@ -1,4 +1,4 @@
-#lang curr/lib
+#lang APCSP/lib
 
 @(design-recipe-exercise "collide?" (list "Write a function collide?, which takes FOUR inputs:"
 @(itemlist @(item "px: The x-coordinate of the player")
