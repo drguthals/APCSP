@@ -3,6 +3,7 @@ This is the repository for Bootstrap 1 materials. This was taken from the origin
 This codebase is maintained by:
 Sarah Guthals
 Beth Simon
+And undergrads 
 
 The following contributors worked on converting the original Bootstrap material in the
 summer of 2012 at Brown University:
