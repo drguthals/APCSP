@@ -4,29 +4,7 @@ This codebase is maintained by:
 Sarah Guthals
 Beth Simon
 
-The following contributors worked on converting the original Bootstrap material in the
-summer of 2012 at Brown University:
-
-  Daniel Kocoj
-  Mike Rowland
-  Winnie Wang
-  Kathi Fisler
-  Jonah Stanley
-  Miles Eldon
-  Andrew Tian
-  Katherine Ng
-
-
-After the summer, the original Bootstrap codebase has been maintained by:
-
-  Emmanuel Schanzer
-  Kathi Fisler
-  Vicki Crosson
-  Emma Youndtsmith
-
-
-
-----------------------------------------------------------------------
+---
 
 # Installation:
 
@@ -39,7 +17,7 @@ After the summer, the original Bootstrap codebase has been maintained by:
    
    Ubuntu: https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu-14.04/
 
-3. ``` git clone git@github.com:sguthals/APCSP.git ``` (Can take a few minutes)
+3. `git clone git@github.com:sguthals/APCSP.git` (Can take a few minutes)
 
    *Note: You may need to run it with sudo*
   
@@ -156,7 +134,30 @@ codemirror.js		pict_10.png		pict_17.png		pict_6.png		scheme2.js
 ```
 From there, you can open index.html and you will see the changes you made!
 
+---
 # From the original Bootstrap README
+The following contributors worked on converting the original Bootstrap material in the
+summer of 2012 at Brown University:
+
+  Daniel Kocoj
+  Mike Rowland
+  Winnie Wang
+  Kathi Fisler
+  Jonah Stanley
+  Miles Eldon
+  Andrew Tian
+  Katherine Ng
+
+
+After the summer, the original Bootstrap codebase has been maintained by:
+
+  Emmanuel Schanzer
+  Kathi Fisler
+  Vicki Crosson
+  Emma Youndtsmith
+
+---
+## Building the Project
 To generate the curriculum under a different tagging context, provide additional arguments to the build.rkt program.  e.g:
 ```
 $ racket build.rkt pedagogy group
