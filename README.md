@@ -34,8 +34,8 @@ After the summer, the original Bootstrap codebase has been maintained by:
 1. Open a terminal and go to the directory where you want this project to live on your machine.
 
 2. Download git and Sign in to GitHub on your terminal:
-Mac: http://burnedpixel.com/blog/setting-up-git-and-github-on-your-mac/
-Ubuntu: https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu-14.04/
+  Mac: http://burnedpixel.com/blog/setting-up-git-and-github-on-your-mac/
+  Ubuntu: https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu-14.04/
 
 3. ``` git clone git@github.com:sguthals/APCSP.git ``` (Can take a few minutes)
   *Note: You may need to run it with sudo*
@@ -50,8 +50,13 @@ Ubuntu: https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu-14.
 3. Add Racket to your PATH variable: 
   ```
   $ vim ~/.bash_profile
+  ```
+  Add this line to the .bash_profile file: 
+  ```
   export PATH="/Applications/Racket v6.8/bin:$PATH
-
+  ```
+  Then re-load the .bash_profile:
+  ```
   $ source ~/.bash_profile
   ```
   *Make sure you fill in your actual path to Racket*
