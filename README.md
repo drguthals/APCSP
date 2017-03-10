@@ -34,11 +34,14 @@ After the summer, the original Bootstrap codebase has been maintained by:
 1. Open a terminal and go to the directory where you want this project to live on your machine.
 
 2. Download git and Sign in to GitHub on your terminal:
-  Mac: http://burnedpixel.com/blog/setting-up-git-and-github-on-your-mac/
-  Ubuntu: https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu-14.04/
+
+   Mac: http://burnedpixel.com/blog/setting-up-git-and-github-on-your-mac/
+   
+   Ubuntu: https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu-14.04/
 
 3. ``` git clone git@github.com:sguthals/APCSP.git ``` (Can take a few minutes)
-  *Note: You may need to run it with sudo*
+
+   *Note: You may need to run it with sudo*
   
 4. *Mac Only*: You may need to agree to XCode.
 
@@ -75,14 +78,14 @@ After the summer, the original Bootstrap codebase has been maintained by:
   ```
 
 ## Download and Install pdftex
-For Macs:
+### For Macs:
 1. Go to: https://www.tug.org/mactex/
 
 2. Download the Smaller Download
 
 3. Open the installer and follow the steps
 
-For Ubuntu or Windows
+### For Ubuntu or Windows
 1. Go to http://www.tug.org/texlive/
 
 2. Follow the instructions for Ubuntu or Windows, depending on which you're using
@@ -95,14 +98,14 @@ For Ubuntu or Windows
 3. Open the installer and follow the steps
 
 ## Download and Install pdftk
-For Mac 10.11:
+### For Mac 10.11:
 1. Go here to download the pdftk package: https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg
 
 2. Open the installer and follow the steps
 
 *NOTE: On https://www.pdflabs.com/tools/pdftk-server/ there is a version for Mac, but it is old and does not work, so make sure you use the one in the steps above*
 
-For Ubuntu:
+### For Ubuntu:
 1. Go here: https://www.pdflabs.com/tools/pdftk-server/
 
 2. Scroll down to the very bottom and follow these instructions: (pasted here, but go to the link because there are links)
