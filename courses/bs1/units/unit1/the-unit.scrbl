@@ -1,6 +1,6 @@
 #lang APCSP/lib
 
-@title{Unit 1: Videogames and Coordinate Planes}
+@title{Ocean Puns}
 
 @declare-tags[]
 
