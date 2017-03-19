@@ -1,23 +1,23 @@
 #lang APCSP/lib
 
-@title{Ocean Puns}
+@title{Recreating a Movie with Objects and Procedures}
 
 @declare-tags[]
 
 @unit-overview/auto[#:lang-table (list (list "" @code{}))]{
-  @unit-descr{Students discuss the components of their favorite videogames, and discover that they can be reduced to a series of coordinates. They then explore coordinates in Cartesian space, and identify the coordinates for the characters in a game at various points in time. Once they are comfortable with coordinates, they brainstorm their own games and create sample coordinate lists for different points in time in their own game.}
+  @unit-descr{Students will watch a video of an Alice movie and recreate the movie when given the starter world for the movie. They'll explore do-together blocks and how changing the parameters of a procedure changes the program behavior. Finally, they'll create methods to compartmentalize their code into neater sections.}
 }
 @unit-lessons{
 @lesson/studteach[
      #:title "Introduction"
-     #:duration "5 minutes"
+     #:duration "15 minutes"
      #:overview ""
      #:learning-objectives @itemlist[]
      #:evidence-statements @itemlist[]
      #:product-outcomes @itemlist[]
      #:standards (list)
      #:materials @itemlist[]
-     #:preparation @itemlist[@item{OPTIONAL: Hand out @(hyperlink "https://docs.google.com/document/d/1USFPXkeO5AbGOzm_U0tMv4NV3RrxTMTyg-bqIKUf4q4/edit?usp=sharing" "Warmup activity sheet").}]
+     #:preparation @itemlist[]
      #:pacings (list 
                 @pacing[#:type "remediation"]{@itemlist[@item{}]}
                 @pacing[#:type "misconception"]{@itemlist[@item{}]}
@@ -25,14 +25,13 @@
                 )
       ]{
         @points[
-             @point{@student{Welcome to Bootstrap! In this course, you'll be learning a new @vocab{programming language} - a way to tell computers exactly what you want them to do. Just like English, Spanish or French, a programming language has its own vocabulary and grammar that you'll have to learn. Fortunately, the language you'll be using here has a lot in common with simple math that you already know!}
-                     @teacher{Set expectations and rules for the class.
-                              Connect the material to come with things students already know:
-                              @itemlist[@item{What makes a language? Do some students already speak more than one language?}
-                                         @item{Programming is very much a language, with its own syntax, semantics, etc}
-                                         @item{Ask students about their favorite videogames. Be open about the scale of a modern game: they cost millions of dollars, are built by huge teams of programmers and artists, and are developed over years.}
-                                         @item{Set expectations about what can be accomplished in a single, introductory programming class.}]}
+             @point{@student{Welcome to CS Principles! In this project, we'll learn about objects, procedures, and parameters. We'll make objects move, talk, think, and even dance! You'll watch a short movie and try to recreate it yourself in Alice. Along the way, you'll be asked to answer questions in your workbook, talk with your peers about ideas on how to recreate what you see, and ultimately, you'll open Alice and start coding!}
+                     @teacher{}
                      }
+
+		@point{@student{To get started, you'll watch a video of someone explaining how they approach recreating a video, and you'll get to see the first few lines of code that make up the video. Additionally, we'll provide you with the starter world for this video, i.e. the objects will have already been added to the scene, so all you have to do is add the code. Don't be afraid to try something even if, especially if, you're not sure it will work. Many of the correct values for parameters are not immediately obvious, and WILL require trial and error to figure out. Run your code often to check that it does what you expect and want it to, that is, match the video! Finally, do NOT forget to save! It takes very little time and will save you a lot of time and frustration if something happens and you lose your work. With that being said, watch the video below to get started.}
+			@teacher{This part is optional. It gives the students a more in-depth overview of what exactly they will be doing as well as provides helpful tips on how to approach each part of the project. You may use all, part, or none of it as you see fit}
+	}
               ]
          }
 
