@@ -36,71 +36,34 @@
          }
 
 @lesson/studteach[
-     #:title "Dissecting a Demo"
-     #:duration "10 minutes"
-     #:overview "Play a simple game, then take it apart and figure out what's going on in the computer."
-     #:learning-objectives @itemlist[@item{Model a simple videogame}]
-     #:evidence-statements @itemlist[@item{Students will be able to identify the elements of a game and how each one changes during gameplay}]
-     #:product-outcomes @itemlist[@item{In workbooks, students create a data model that describes a simple videogame}]
+     #:title "Watching a Movie: Like a Programmer"
+     #:duration "20 minutes"
+     #:overview "Watch a video of what the students will be recreating, then fill out a table answering questions about it"
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
      #:standards (list "BS-M")
-     #:materials @itemlist[@item{Editing environment (WeScheme or DrRacket with the bootstrap-teachpack installed)}]
-     #:preparation @itemlist[@item{Computer for each student (or pair), running WeScheme or DrRacket}
-                             @item{If using DrRacket, make sure the Ninja.rkt file is loaded}
-                             @item{"NinjaCat" [NinjaCat.rkt from @resource-link[#:path "source-files.zip" #:label "source-files.zip"] | @(hyperlink "http://www.wescheme.org/view?publicId=sggzRzgU5T" "WeScheme")] preloaded on students' machines}
-                             @item{Student @resource-link[#:path "workbook/StudentWorkbook.pdf" #:label "workbook"] folders with names on covers, and something to write with}]
-     #:pacings (list 
-                @pacing[#:type "remediation"]{@itemlist[@item{}]}
-                @pacing[#:type "misconception"]{@itemlist[@item{}]}
-                @pacing[#:type "challenge"]{@itemlist[@item{}]}
-                )
-      ]{
+     #:materials @itemlist[@item{Workbook}]
+     #:preparation @itemlist[]
+     
+   ]{
         @points[
-          @point{@student{Let's begin by exploring a simple videogame, and then figuring out how it works. Open @run-link[#:public-id "sggzRzgU5T" "this link"] 
-                         to play the game, and spend a minute or two exploring it. @italic{You can use the arrow keys to move 
-                         the cat left, right and jump - try to catch  the ruby and avoid the dog!}}
-                 @teacher{[@(hyperlink "https://www.youtube.com/watch?v=KSt_3ovWfjk" "Video")] Show the kids NinjaCat, either letting them play or by demoing it in front of the class. You can move the cat up, down, left and right by using the arrow keys. 
-                          Play until the students see all the characters (the clouds, the ruby, the dog and the cat), and be 
-                          sure to point out the title and score as well.}
+          @point{@student{Let's start by watching a video of what you'll be recreating. Click [@(hyperlink "https://drive.google.com/file/d/0B4mfcQCNQcBqdEs1YmhCNWcxVFE/view?usp=sharing" "here")] to watch it once before turning to page 394 in your workbook and filling out the table there, including names you'd give to the three characters, what actions each performs, and in which part of the movie the character first appears}
+                 @teacher{It is recommended that you watch the video together once as a class first to force students to pay attention to the video before going to fill out their workbooks. Then they can rewatch it as needed while filling out the table. You can assign students to work in pairs or groups to facilitate discussion. If students are working together, check in on them periodically to make sure they are explaining their choices to each other and not just sharing/copying answers. If students are working individualy, walk among them to monitor progress and select a few students to explain their thought processes to you. Go over the answers as a group, calling on students to share their answers and go over why their answer is correct}
                  }
-          
-          @point{@student{This game is made up of @italic{characters}, each of which has its own behavior. The Ruby moves from the right to the left, as does the Dog. NinjaCat only moves when you hit the arrow keys, and she can move left, right, up and down. We can figure out how the game works by first understanding how each character works.}
-                 @teacher{}
-                 }
-          
-          @point{@student{@activity[#:forevidence (list "BS-M&1&1")]{@bitmap{images/game-table1.png} Turn to @worksheet-link[#:name "NinjaCat-Dissection"] in your workbook. Here we have a table, which we'll use to reverse-engineer NinjaCat and see how it works. Fill out the first column with a complete list of all things in the game.}
-                           }
-                 @teacher{This can be a team activity. Solicit a few examples from students, to make sure they understand what's being listed here: nouns like "the cat", not verbs like "jumping". During this activity, walk around and see how groups are doing. 
-                          This is the time to encourage expectations of community and respect - call out good teamwork when you see it! When time is up, give them a countdown: "30...10... 5... 4... 3... 2... 1... PENCILS DOWN, EYES UP HERE!" Wait for total silence and complete attention. }
-                 }
-          
-          @point{@student{Did you list all four moving characters? What else is in the game? Is the background a part of the game? The score?}
-                 @teacher{Have students come up to the board, and fill in the table with what they've found. If time is short, call on students and have them tell you what to write.}
-                 }
-          
-          @point{@student{@activity{@bitmap{images/game-table2.png}We also need to think about what is @italic{changing} when we play the game. What about the Ruby? Does it get bigger? Does it change color? Does it spin around? The only thing that changes about the Ruby is its @italic{position}! Everything else about it is the same. What about the Dog? The Cat? Fill in the rest of the second column, listing everything that changes about each character.}}
-                 @teacher{}
-                 }
-                            
-          @point{@student{Did you notice that the Dog, Ruby, Cloud and Cat only change position, and nothing else? What about the Background - it doesn't change at all, so we can @italic{leave that cell in table blank!} Did you notice the Score changes value? You'll want to add that to your table, too!}
-                 @teacher{Quickly fill in the second column on the board. Assign scores.}
-                 }
-          ]}
+           ]}
 
 @lesson/studteach[
-     #:title "Coordinate Planes"
-     #:duration "15 minutes"
-     #:overview "Students must use the Cartesian plane to describe the location of characters in a picture."
-     #:learning-objectives @itemlist[@item{Understand the use of number lines in defining locations via coordinates}]
-     #:evidence-statements @itemlist[@item{Students apply the number line as a tool for objectively defining location, first identifying how to apply it to 
-                                           describe the position of a character onscreen in one dimension. This understanding is extended to two dimensions, 
-                                           ultimately motivating the use of a coordinate grid.}]
-     #:product-outcomes @itemlist[@item{Students identify the coordinates of characters in a picture}]
+     #:title "Programming Scramble"
+     #:duration "20 minutes"
+     #:overview "Students will be given lines of code from the program they need to write and put them in the correct order to do what they want to accomplish"
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
      #:standards (list "6.NS.5-8" "N-Q" "5.G.1-2")
-     #:materials @itemlist[@item{Cutouts of  @resource-link[#:path "images/ninjacat.png" #:label "NinjaCat"],  @resource-link[#:path "images/dog.png" #:label "Dog"]
-                                 and the  @resource-link[#:path "images/ruby.png" #:label "Ruby"]}
-                            @item{Student Workbooks, and something to write with}]
+     #:materials @itemlist[]
      #:preparation @itemlist[@item{Student Workbooks, and something to write with}]
-     #:prerequisites (list "Dissecting a Demo")
+     #:prerequisites (list "Watching a Movie")
      #:pacings (list 
                 @pacing[#:type "remediation"]{@itemlist[@item{}]}
                 @pacing[#:type "misconception"]{@itemlist[@item{}]}
@@ -110,62 +73,11 @@
                 )
         ]{
   @points[
-      @point{@student{@bitmap{images/number-line.png}Computers use numbers to represent a character's position onscreen, using number lines as rulers to measure 
-                       the distance from the bottom-left corner of the screen. For our videogame, we will place the numberline so that the screen runs from 0 
-                       (on the left) to 640 (on the right). }
-              @teacher{The key point for students here is @italic{precision} and @italic{objectivity}. There are many possible correct answers, but students
-                       should understand why any solution should be accurate and unambiguous. This requires students to propose solutions that share a common
-                       "zero" (the starting point of their number line) and direction (literally, the direction from which a character's position is measured).
-                       Have students discuss this. If time allows, have a student leave the room and let other students come up with ways to write
-                       down where the dog is on the board. Then remove the dog, call in the other student, and have the class direct them using 
-                       only what they've written down.Try positioning the characters at different places on the line, and have students tell you 
-                       what their coordinates are. Try giving them verbal descriptions (e.g. "The center of the screen", "Off the righthand 
-                       side of the screen", etc.) and have them translate those into coordinates.}
+      @point{@student{@bitmap{images/number-line.png} Try to unscramble the following pieces of code to recreate the beginning of the video (i.e. whale asks dolphin to dance, dolphin agrees, whale is excited, then dolphin is mean and swims away). You should rewatch the beginning before getting started, and feel free to refer back to the video as you go.}
+              @teacher{Have students complete this task individually, then pair up and compare their answers.}
               }
-       @point{@student{We can take the image of the Dog, stick it anywhere on the line, and measure the distance back to 
-                       the lefthand edge. Anyone else who knows about our number line will be able to duplicate the exact position of the Dog, knowing only 
-                       the number. What is the coordinate of the Dog on the righthand side of the screen? The center? What coordinate would place the Dog beyond 
-                       the lefthand edge of the screen?}
-               @teacher{}
-               }
-      @point{@student{@bitmap{images/cat-coordinates.png}By adding a second number line, we can locate a character anywhere on the screen in either 
-                       dimension. The first line is called the x-axis, which runs from left to right. The second line, which runs up and down, is 
-                       called the y-axis. A 2-dimensional @italic{coordinate} consists of both the x- and y-locations on the axes. }
-              @teacher{A coordinate represents a single point, and an image is (by definition) many points. Some students will ask whether a
-                       character's coordinate refers to the center of the image, or one of the corners. In this particular program, the center 
-                       serves as the coordinate - but other programs may use another location. The important point in discussion with students
-                       is that there is flexibility here, @italic{as long as the convention is used consistently}.}
-              }
-      @point{@student{Suppose we wanted to locate NinjaCat's position on the screen. We can find the x-coordinate by dropping a line down from NinjaCat and read 
-                       the position on the number line. The y-coordinate is found by running a line to the y-axis.}
-              @teacher{(If time allows, invite volunteers up to the board to try placing NinjaCat and the Ruby at different locations. Have students identify the
-                       coordinates at the corners of the screen. For additional practice, have students bisect each side of the screen and label
-                       the midpoints.)}
-             }
-      @point{@student{When we write down these coordinates, we always put the x before the y (just like in the alphabet!). Most of the time, 
-                      you'll see coordinates written like this: (200, 50) meaning that the x-coordinate is 200 and the y-coordinate is 50.}
-              @teacher{}
-              }
-
-      @point{@student{Depending on how a character moves, their position might change only along the x-axis, only along the y-axis, or both. Look
-                      back to the table you wrote in the workbook (@worksheet-link[#:name "NinjaCat-Dissection"]).
-                      Can NinjaCat move up and down in the game? Can she move left and right? So what's changing: her x-coordinate, her y-coordinate, 
-                      or both? What about the clouds? Do they move up and down? Left and right? Both?}
-              @teacher{}
-              }
-      
-      @point{@student{@activity[#:forevidence (list "N-Q&1&4" "5.G.1-2&1&1" "5.G.1-2&1&2")]{
-                          @bitmap{images/game-table3.png}Fill in the rest of the table, identifying what is changing for each of your characters.}
-                       }
-              @teacher{}
-              }
-      
-      @point{@student{@activity[#:forevidence (list "6.NS.5-8&1&2")]{Turn to @worksheet-link[#:name "NinjaCat-Coordinates"] in your game-planning workbook, and look at the
-                                        project sheet that has a picture of the NinjaCat game. What are the coordinates at the bottom-left corner 
-                                        of the screen? Top-right? Center? For practice, label the coordinates at the midpoint of @italic{each side}
-                                        of the screen, then label the coordinates of each of the characters.}}
-              @teacher{}
-              }]
+           
+                                ]
    }
 
 @lesson/studteach[
