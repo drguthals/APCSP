@@ -159,26 +159,15 @@
          }
 
 @lesson/studteach[
-     #:title "Intro to Programming"
+     #:title "Introducing Pseudocode"
      #:duration "15 minutes"
-     #:overview "Students are introduced to the programming environment"
-     #:learning-objectives @itemlist[@item{Convert Circles of Evaluation into code}
-                                     @item{Enter and evaluate code expressions for arithmetic on the computer}
-                                     @item{Understand the goal of error messages from the computer}]
-     #:evidence-statements @itemlist[@item{Students will be able to identify the Interactions and Definitions areas}
-                                     @item{Students will be able to enter and evaluate simple arithmetic expressions in the Interactions area}
-                                     @item{Students will be able to convert Circles of Evaluation into correctly-formed programs}
-                                     @item{Students will be able to explain an 'unbounded identifier' error message}
-                                     @item{Students will be able to explain the purpose of error messages}
-                                     @item{Given a Circle of Evaluation, students will be able to complete a partially-written program}
-                                     @item{Given a bank of Circles of Evaluation and programs, students will be able to match them}]
+     #:overview "Students are introduced to the concept of writing pseudocode"
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
      #:product-outcomes @itemlist[]
      #:standards (list "A-SSE.1-2" "N-Q" "BS-CE" "BS-PL.1" "BS-IDE")
-     #:materials @itemlist[@item{Editing environment (WeScheme or DrRacket with the bootstrap-teachpack installed)}]
-     #:preparation @itemlist[@item{Computer for each student (or pair), running WeScheme or DrRacket}
-                              @item{Students are logged into WeScheme.org, OR have opened DrRacket.}
-                              @item{Student Workbooks, and something to write with}
-                              @item{Overhead projector}]
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
      #:prerequisites (list "Order of Operations")
      #:exercises (list (make-exercise-locator "Intro-to-Programming" "complete-code-from-coe1")
                        (make-exercise-locator "Intro-to-Programming" "coe-to-code1")
@@ -192,146 +181,16 @@
                 )
       ]{
         @points[
-                @point{@student{Open the programming tool of your choice: If you've installed, DrRacket, double-click the 
-                                application to launch it. If you are using the online-tool, @login-link["click here to log in"]
-                                enter your username and password to log in, then click "Start a New Program".}
-                        @teacher{Have the students look at the editor on their computers. Refer to overhead 
-                                 projector as necessary.}
+                @point{@student{Google defines pseudocode to be "a notation resembling a simplified programming language, used in program design." That definition was pretty technical, so let's break it down a little. Think of pseudocode as the closest you can get to actual code without writing actual code. So it will look different from the code you actually use in your program, but all the steps will be there in the right order. If you do it correctly, you should be able to translate your pseudocode line by line into actual code. The purpose of pseudocode is to be able to write down your thoughts and ideas without being encumbered by having to actually write code with the correct syntax. This would be more useful if you were using a programming language that required you to write code yourself, unlike Alice, in which you just drag blocks of code without having to worry about syntax. This will still be useful to you though to get some ideas down before you approach coding. Starting a program can be daunting, so hopefully, if you start with some pseudocode it will be easier as you already have a good idea of what you want to be doing. It will also be useful for you to just be able to write down what you see happening in the video, and then take that line and translate it into Alice code. Try watching the video again, pausing as you go, and make a list of what happens.}
+                        @teacher{Pseudocode is an important skill in computer science. This is only a brief introduction. This project will be very simple for some students and they will not understand why they have to take this extra step. Explain to them that while this movie is fairly simple to recreate directly in Alice, other projects will be more complex and it will be useful to know how to break things into steps.}
                         }
-                 
-                @point{@student{@bitmap{images/wireframeIDE.png}This screen is called the @vocab{editor}, and it looks something
-                                 like the diagram you see here. There are a few buttons at the top, but most of the screen is 
-                                 taken up by two large boxes: the @vocab{Definitions area} on the left and the 
-                                 @vocab{Interactions area} on the right.}
-                        @teacher{The Definitions area is where programmers define values and functions in their program, 
-                                 while the Interactions area allows them to experiment with those values and functions. 
-                                 This is analogous to writing a series of function definitions on a blackboard, and having 
-                                 student evaluate expressions using those function on scrap paper. As students are not yet 
-                                 defining values of their own, it is not important that students understand this distinction 
-                                 right now.  For now, we will work only with the Interactions area.}
-                        }
-                
-                @point{@student{A program is a @vocab{legal expression} that, when evaluated, produces a value. You've been
-                                               writing programs using mathematical expressions since you first learned how 
-                                               to add! Just as in English, there are rules that determine whether a sentence
-                                               makes sense. Programs have rules too!  A program can be very complicated, but
-                                               it doesn't have to be: the simplest programs of all are just Numbers.}
-                        @teacher{Draw students' attention to the Language Table (see Lesson Overview for Unit 1),
-                                 which currently sits empty. Add "Numbers" to the Types section of the language 
-                                 table.}
-                        }
-                @point{@student{@bannerline{Code Rule 1: All values are legal expressions.}
-                                 @activity[#:forevidence "BS-IDE&1&1"]{What do you think @code{4} will evaluate to? 
-                                                                       @editor-link[#:interactions-text "4"
-                                                                                    "Click here to test it out."]}
-                                              @itemlist[@item{Enter 4 in the Interactions area and hit "Return". You
-                                                              will see the value @code{4} appear on the next line in 
-                                                              the Interactions area.}
-                                                        @item{Type 10 in the Interactions area and hit "Return".  Now the 
-                                                              value @code{10} appears in the Interactions area.}
-                                                         @item{Try evaluating numbers, like @code{10345017}, or negative 
-                                                               numbers, like @code{-2}. Is there a limit to how big a number can be?
-                                                               What happens if you write a decimal? What happens when you click on
-                                                               a decimal, like @code{0.75}? You get a new type of number, a 
-                                                               fraction, like @code{3/4}.}]
-                                }
-                        @teacher{The editing environment evaluates all fractions and returns them as decimals by default. This can be
-                                 surprising to students at first, so you may want to take a moment to explain what's going on, and 
-                                 show them that these decimals can be converted back to fractions just by clicking on them.  The 
-                                 environment uses standard annotations for repeating, non-terminating decimal expressions and 
-                                 properly handles expressions like @math{(\sqrt -1)}.  If you want to work with those kinds of 
-                                 numbers in your class, enter them to get familiar with how they appear in the Interactions area.}
-                        }
-           
-                
-                @point{@student{@activity[#:forevidence "BS-IDE&1&2"]{The computer obviously knows about Numbers, but what happens
-                                                                      if you type in something that it @italic{doesn't} know about?
-                                                                      Will it complain? Crash? Guess?
-                                                                      @editor-link[#:interactions-text "dog" "Try asking the computer"] 
-                                                                      to evaluate @code{dog} in the Interactions area.}
-                                 These error messages are really useful for programmers. Rather than saying "this program doesn't 
-                                work", the computer does the best it can to tell you what went wrong, and to give you as much 
-                                information as possible to help you fix the problem. Make sure you always read these messages carefully!
-                                 }
-                        @teacher{The error message uses the term "variable".  Don't worry if your students don't already know this 
-                                 term; we will teach it to them shortly.  For now, students just need to get used to error messages 
-                                 and the kinds of problems that they catch in programs.}
-                        }
-                
-                @point{@student{The Circles of Evaluation are also easy to convert into computer programs. To translate a Circle of
-                                Evaluation into a program, begin with an open parenthesis @code{(}, and then the function written at
-                                the top of the circle. Then translate the inputs from left to right in the same way, adding a closing
-                                parenthesis @code{)} when you're done. This process gives us the second rule for @vocab{expressions}:  
-                                @bannerline{Code Rule 2: Each open parenthesis is followed by one function, then by one or more legal
-                                            expressions, and finally by a closing parenthesis.}
-                                 @bitmap{images/FixedCircle.png}Here is the code for this Circle of Evaluation: @code{(- 4 5)}
-                                 @activity[#:forevidence "BS-PL.1&1&2"]{ @editor-link[#:interactions-text "(- 4 5)" "See what happens"]
-                                                                         when this code is entered into the Interactions area.
-                                                                         Press the Return key to evaluate the program. You should 
-                                                                         see @math{-1} as an answer.
-                                                                        }
-                        }
-                        
-                        @teacher{Have students practice converting simple Circles of Evaluation into code.  If you want to help students 
-                                 understand when to use the parentheses, here are two explanations that we find useful.  First, the
-                                 parens look like the Circle, and the Circle encloses the function name and its inputs.  Second, we
-                                 use a more visual description of an ant eating its way through the expression.  The ant eats into the 
-                                 Circle (an open paren), then goes to the function at the top, then to the arguments from left to right,
-                                 then finally out of the Circle (a close paren).  If the ant encounters another Circle while writing 
-                                 down the arguments, it needs another open paren, etc.}
-                        }   
-                @point{@student{@bitmap{images/NestedCircle.png}When a Circle of Evaluation has other circles inside of it, the 
-                                 translation still follows the same rules: each Circle requires a new set of parentheses:
-                                 @code{(* 6 (+ 4 5))}
-                                 @activity[#:forevidence "BS-PL.1&1&2"]{@itemlist[@item{Try entering this code into the Interactions 
-                                                                                        area. What should the program evaluate to 
-                                                                                        when you hit Return?}
-                                                     @item{Practice converting other Circles of Evaluation you've drawn into code.}]}}
-                        @teacher{[@(hyperlink "https://www.youtube.com/watch?v=vgkahOzFH2Q" "Video on Roles in Pair Programming.")]
-                                  Scaffolding for Pair Programming: Talk to students about the roles of @italic{Driver} 
-                                  and @italic{Navigator}. The Driver is the student with their hands on the keyboard - they're 
-                                  in charge of typing, using the mouse, etc. The Navigator should be telling the Driver what to
-                                  type, and pointing out mistakes or suggesting things. It's important to clarify what these 
-                                  roles are (perhaps reinforcing them with a visual), to ensure that both partners are active 
-                                  and talking to one another about the task at hand.  The linked video does a great job discussing these roles.}
-                        }
-               
-                @point{@student{@bannerline{All of the expressions that follow the function name are called @vocab{arguments} to the 
-                                            function. The following diagram summarizes the shape of an expression that uses a function. 
-                                            @bitmap{images/ExpressionDiagram.png}}
-                                @activity[#:forevidence (list "BS-CE&1&2" "BS-CE&1&4")]{
-                                        For practice, turn to @worksheet-link[#:name "Circle-of-Evaluation-Practice"]
-                                        in your workbook. For each mathematical expression, draw the Circle of Evaluation, then convert
-                                        that Circle into Racket code.}}
-                        @teacher{}
-                        }
-                @point{@student{When expressions don't follow the code rules, the computer will tell you that it found a problem.  The
-                                computer also gives you information to help you fix the problem. This information is called an 
-                                @vocab{error message}. We'll talk more about error messages later.  For now, we just want you to see 
-                                a couple of error messages so that you'll know what they are if you run into one while programming.
-                       @activity[#:forevidence "BS-IDE&1&2"]{Enter each of the following illegal expressions in the Interactions area 
-                                                             and look at the error message or behavior that the computer gives you. 
-                                 @itemlist[@item{@code{(5 * 6)} [puts the function in the middle, instead of at the front]}
-                                           @item{@code{(*5 6)}  [missing a space after the function]}
-                                           @item{@code{* 5 6)}  [forgets the open parenthesis]}
-                                           @item{@code{(* 5 6}  [forgets the close parenthesis]}
-                                          ]}}
-                       @teacher{At this point, the goal is simply to have students @italic{see} error messages.  Students are not 
-                                expected to be experts at reading error messages this early 
-                                (you will drill this later).  NOTE: When a close parenthesis is missing, hitting return will do nothing, 
-                                because the computer is waiting for the parenthesis.  When an open parenthesis is missing, WeScheme
-                                does nothing and waits for the programmer 
-                                to add the parens.  If students hit enter and "nothing happens", they should check their parentheses. 
-                                Also note that if you do this sequence of exercises with @code{+} instead of @code{*}, the error 
-                                appears differently, because @code{+5} is a perfectly valid number (just like @code{-5}).}
-                      }
-                ]}
+               ]}
 
 
 @lesson/studteach[
-     #:title "Closing"
-     #:duration "5 minutes"
-     #:overview ""
+     #:title "Writing Your Own Pseudocode"
+     #:duration "40 minutes"
+     #:overview "Students will continue their work from the last section."
      #:learning-objectives @itemlist[]
      #:evidence-statements @itemlist[]
      #:product-outcomes @itemlist[]
@@ -344,15 +203,114 @@
                 @pacing[#:type "challenge"]{@itemlist[@item{}]}
                 )
       ]{
-        @points[@point{@student{You've done a lot in this first unit!  
-                                @itemlist[@item{You took a game apart to see how the parts move}
-					  @item{You designed your own game, that you'll make during this course}
-                                          @item{You practiced using coordinates to put characters into a screen}
-                                          @item{You learned about order of operations, Circles of Evaluation, how to turn Circles of
-                                                Evaluation into programs, and how to run those programs to get answers.}]
-                        In the next unit, we'll begin writing programs for more interesting things than just arithmetic.}
-                        @teacher{Make sure student names are on the Game Design page. Take this page, or take photos of it, to prep game images for a later Unit. }}
+        @points[@point{@student{Take a look at the list you just made. Your list for the first 5 seconds of the video might look something like this:  
+                                @itemlist[@item{Whale asks dolphin to dance}
+					  @item{Dolphin spins around}
+                                          @item{Dolphin says yes}
+                                         ]
+                       }
+                        @teacher{Hopefully most students' lists match the list here. If a significant number are confused, go over this section together as a class and explain how the list was formed, i.e. writing down what happens in the video.}
+	}
+	@point{@student{Now to translate this into pseudocode, you will want to make your list include the object and the specific action. For example:
+			@itemlist[@item{Whale says "Whale you dance with me?"}
+				@item{Dolphin rolls around twice}
+				@item{Dolphin says "Dolphinatley"}]
+From there you could easily translate into Alice code blocks:
+			@itemlist[@item{@italic{this.orca say "Whale you dance with me?"}}
+				@item{@italic{this.dolphin roll RIGHT, 2.0}}
+				@item{@italic{this.dolphin say "Dolphinately!"}}]}
+		@teacher{Even if most students were fine with the original list, it is still a good exercise to go through this and the following parts together as a class. This will give the students a concrete example of what pseudocode looks like, how to form it, and finally, how to translate it into actual code.}
+
+		}
+	@point{@student{Now try to write pseudocode for the rest of the video. You can break it up into chunks to make it easier. This way you can add code as you go, while still utilizing pseudocode as an in-between step. Turn to page 77 in your workbook to write pseudocode for the movie. The workbook will direct you as to what portions of the video you should write pseudocode for.}
+		@teacher{Give students approximately 30 minutes to work on pseudocode for the rest of the video. Have them talk to each other if they get stuck. If they haven't finished in the allocated time, they should move on to the next section anyway. They can finish writing pseudocode later as part of the process to recreate the movie. If some students finish early they can start translating pseudocode into Alice code on the computers.}}
                ]
+         }
+}
+
+@lesson/studteach[
+     #:title "Instructional Video"
+     #:duration "10 minutes"
+     #:overview "Students will think about getting started with translating their pseudocode and adding code to Alice."
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{Skip this part if you think you know how to get started. If you don't, that's okay! Watch this @bold{video}; it'll go through the thought process necessary to start recreating a movie. Pay careful attention to the explanations as well as the code blocks; you'll need to follow a similar thought process yourself to recreate the rest of the movie.}
+                        @teacher{It is suggested that you watch the video as a class. Some students may want to start themselves without watching the video. Use your discretion in allowing this. It may be easier to watch the video as a class once or twice first, then release students to get started. They may rewatch the video several times as they attempt coding for themselves.}
+	}               ]
+         }
+}
+@lesson/studteach[
+     #:title "Try it Yourself"
+     #:duration "200 minutes"
+     #:overview "Students will recreate the video in Alice."
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{Now you're ready to try everything for yourself! Your task is to finish recreating the movie using all the starter code we've given you. If you get stuck, go back and rewatch the instructional videos we've provided you with and try writing/rewriting pseudocode. If you get really stuck, consult with your fellow students. Don't copy their code, but you can discuss what difficulties you're having. They may have helpful suggestions or they may be having the same problem, and you can work on it together. As a very last result, you may ask your teacher for help, but do try all the aforementioned strategies first. It will be much more rewarding if you figure it out for yourself.}
+                        @teacher{This is the final section of this project, but it will likely take a comparable amount of time to the time already spent on this lesson. Students are to work primarily by themselves, but are encouraged to consult with each other if they run into difficulties. Before they ask for your help, they should have exhausted all other resources available to them. If students do come to you for help, the code for the original movie can be found @bold{here}. Comparing the correct code to the student's code will often give you an opportunity to point out where they went wrong and suggest what they might do to fix it.}
+	}               ]
+         }
+}
+@lesson/studteach[
+     #:title "The do-together Block"
+     #:duration "25 minutes"
+     #:overview "This section identifies where students need to use a do-together block and how it changes their program."
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{If you've never used a do-together block, you'll find these @bold{videos} very helpful and informative. If you have used a do-together block before, but are still shaky on the concept, or would like a refresher, the videos above will be helpful for you, too. If you're extremely comfortable with a do-together block, you may move on. Be aware, however, that the second video does identify which part of the movie requires a do-together block. It should be fairly obvious when watching the differences in the videos above, but it could be hard to identify by simply watching the movie because the procedures combined in the do-together block actually change the resulting motion of objects. We don't expect you to to be able to identify this and the procedures used, but you're welcom to try. If you get too frustrated, though, the videos are here to help you.}
+                        @teacher{Have students engage with this section after they've already made progress in recreating the movie. Once they reach the part where the shark and whale start dancing, introduce this section. Students may complete this section at different times depending on how fast they complete the first part of the movie. This section primarily involves watching videos, so the class does not have to go through this together.}
+	}               ]
+         }
+}
+
+@lesson/studteach[
+     #:title "Extra Credit"
+     #:duration ""
+     #:overview "Students who finish early can do an additional activity"
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{Create your own short movie in Alice with 2-3 characters, 3-5 different procedures, and 20-30 lines of code. You can watch sample videos @bold{here}, @bold{here}, and @bold{here} to get ideas. Be as creative as you can!}
+                        @teacher{There will likely be a wide range of how long it takes students to finish. For those who finish early, give them this extra credit project to work on while the other students finish the original project. Students may collaborate on this extra credit project if they wish.}
+	}               ]
          }
 }
 
