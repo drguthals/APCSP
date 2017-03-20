@@ -36,7 +36,7 @@
          }
 
 @lesson/studteach[
-     #:title "Watching a Movie: Like a Programmer"
+     #:title "Watching a Movie: Programming Style"
      #:duration "20 minutes"
      #:overview "Watch a video of what the students will be recreating, then fill out a table answering questions about it"
      #:learning-objectives @itemlist[]
@@ -81,17 +81,15 @@
    }
 
 @lesson/studteach[
-     #:title "Brainstorming"
-     #:duration "15 minutes"
-     #:overview "Students select the theme and characters for their videogame"
+     #:title "Explore in Depth"
+     #:duration "20 minutes"
+     #:overview "Students take a closer look at a few lines of code to really understood what each part is doing in their program"
      #:learning-objectives @itemlist[]
      #:evidence-statements @itemlist[]
-     #:product-outcomes @itemlist[@item{Students complete the Videogame Design Worksheet to design their own game}]
+     #:product-outcomes @itemlist[]
      #:standards (list)
      #:materials @itemlist[@item{}]
-     #:preparation @itemlist[@item{Computer for each student (or pair), running WeScheme or DrRacket}
-                             @item{If using DrRacket, make sure the Ninja.rkt file is loaded}
-                             @item{Student Workbooks, and something to write with}]
+     #:preparation @itemlist[]
      #:pacings (list 
                 @pacing[#:type "remediation"]{@itemlist[@item{}]}
                 @pacing[#:type "misconception"]{@itemlist[@item{}]}
@@ -101,56 +99,30 @@
         
         
 @points[
-        @point{@student{On @worksheet-link[#:name "Game-Design"], you'll find a planning template for you to make your own game. 
-                           Just like we made a list of everything in the NinjaCat game, we're going to start with a list of everything in your game.}
-                @teacher{Have students put their names at the top of this page.}
+        @point{@student{Now let's explore some lines of code to see what exactly they are doing. Answer the questions below in your workbook.}
+                @teacher{Have the students work in pairs and take turns answering questions. Student A should answer the first question and explain their thought process to Student B, then vice versa for the next question. Have them continue switching back and forth until all questions are answered.}
                 }
          
-        @point{@student{To start, your game will have with four things in it: 
-                        @itemlist[
-                                  @item{A Background, such as a forest, a city, space, etc.}
-                                   @item{A Player, who can move when the user hits a key.}
-                                   @item{A Target, which flies from the right to the left, and gives the player points for hitting it.}
-                                   @item{A Danger, which flies from the right to the left, which the player must avoid.}]}
-                @teacher{Have students walk through some sample themes, to make sure they understand the format of the game. For example: A football 
-                         game might have a quarterback for the player, a rival player for the danger, and a football as the target. A jungle game
-                         might have a monkey as the player, a snake as the danger, and bananas as the target.}
+        @point{@student{Consider @italic{this.orca moveToward this.dolphin, 1.0}. In your workbook draw a circle around the object, underline the procedure, and put a box around the parameters. Which part of the code tells the orca which direction to move? Which part of the code tells the orca how far to move? How would our program change if we switched the places of @italic{this.orca} and @italic{this.dolphin}? Try it out on your own in Alice to see if your prediction was correct!}
+                @teacher{}
                 }
         
-        @point{@student{@activity{Now it's time to get creative! Fill out @worksheet-link[#:name "Game-Design"] in your 
-                                  workbook for @italic{your} game, using your own player, target and danger.}}
-                @teacher{Be sure to consult with every team. A lot of students will have trouble fitting their ideas into this 
-                         format, or they'll struggle with coordinates. Be clear about what can and cannot be done! (e.g. - no 
-                         3d games, joysticks, multiplayer games, etc. Hint: students who have a well-worded description of their
-                         images will be happier with any images you could find them. Try searching for "Person" versus "Jogger",
-                         for example.}
+        @point{@student{Compare @italic{this.dolphin move FORWARD, 10.0} to the @italic{moveToward} procedure above. What parameters does the @italic{move} procedure take? Are they different from the parameters the @italic{moveToward} procedure takes? What might be the advantages and disadvantages of each procedure? Could we have used the @italic{move} procedure to make the orca move toward the dolphin? Could we have used the @italic{moveToward} procedure to make the dolphin swim off the screen?}
+                @teacher{}
                 }
+
+	@point{@student{Take a look at @italic{this.dolphin say "Dolphinately!"} and @italic{this.orca think "Awesome :D"}. What are some similarities between these two procedures? Could you tell them apart based solely on their parameters? How does using @italic{think} instead of @italic{say} affect our program?}
+		@teacher{}
+		}
         ]}
 
 @lesson/studteach[
-     #:title "Order of Operations"
-     #:duration "20 minutes"
-     #:overview "Students identify the order of operations for complicated arithmetic expressions through diagramming (circles) and 
-                 evaluating (the numerical answer). This lesson introduces students to the Circle of Evaluation, which is a sentence 
-                 diagramming tool for arithmetic expressions. This is a powerful way to understand Order of Operations, as it forces
-                 students to focus on the structure of expressions over their computed result."
-     #:learning-objectives @itemlist[@item{Understand the structure of arithmetic expressions}
-	                             @item{Understand order of operations in an expression}
-                                     @item{Write expressions as Circles of Evaluation}
-                                     @item{Translate between Circle of Evaluation and arithmetic expressions}
-]
-     #:evidence-statements @itemlist[@item{Students will be able to explain why arithemetic expressions require structure}
-                                     @item{Students will be able to identify the order of operations in an expression that includes 
-                                           adding, subtracting, multiplying and dividing}                                     
-                                     @item{Given a Circle of Evaluation, students will be able translate the expression into the 
-                                           arithmetic expression it represents}
-                                     @item{Given an arithmetic expression, students will be able to complete a partially-finished Circle
-                                           of Evaluation for the same expression}
-                                     @item{Given a bank of Circles of Evaluation and arithmetic expressions, students will be able to match them}
-                                     @item{Students will be able to translate the structure of an arithmetic expression into a Circle of 
-                                           Evaluation}
-]
-     #:product-outcomes @itemlist[@item{Students convert several arithmetic expressions between multiple representations}]
+     #:title "Starter World"
+     #:duration "10 minutes"
+     #:overview "Students download the world and get comfortable with it."
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
      #:standards (list "A-SSE.1-2" "BS-CE" "5.OA.1-2")
      #:exercises (list (make-exercise-locator "Order-of-Operations" "complete-coe-from-arith1")
                        (make-exercise-locator "Order-of-Operations" "complete-coe-from-arith2")
@@ -162,10 +134,8 @@
                        (make-exercise-locator "Order-of-Operations" "match-arith-coe1")
                        (make-exercise-locator "Order-of-Operations" "coe-to-math-answer1")
                        (make-exercise-locator "Order-of-Operations" "coe-to-math-answer2"))
-     #:materials @itemlist[@item{Editing environment (WeScheme or DrRacket with the bootstrap-teachpack installed)}]
-     #:preparation @itemlist[@item{Computer for each student (or pair), running WeScheme or DrRacket}
-                             @item{If using DrRacket, make sure the Ninja.rkt file is loaded}
-                             @item{Student Workbooks, and something to write with}]
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
      #:pacings (list 
                 @pacing[#:type "remediation"]{@itemlist[@item{Have students practice translating very simple (one-operation) expressions into 
                                                               simple (one-circle) Circles of Evaluation. By choosing the numbers in these 
@@ -181,149 +151,11 @@
                 )
       ]{
         @points[
-                @point{@student{Math is a language, just like English, Spanish, or any other language. We use nouns, like "bread", "tomato", 
-                                "mustard" and "cheese" to describe physical objects. Math has @vocab{values}, like the numbers @math{1}, 
-                                @math{2} or @math{3}, to describe quantities.}
+                @point{@student{We're finally ready to start coding. Click on this @bold{link} to download the starter world for this program. The scene will already be set up for you with all the objects needed. If you would like, however, you can attempt to set it up yourself. An instructional video explaining how you might go about this can be found @bold{here}. Once you have downloaded the starter world, follow the instructions @bold{here} to open the world in Alice. Take a moment to explore the world, including all its objects. Can you find the shark? Once you feel comfortable, move on to the next step.}
 
-                        @teacher{Students should begin to look at math as a @italic{language}.  To help them with this, you can discuss syntax 
-                                 and grammar of math, and its potential for ambiguity in the absence of a fixed order of operations.  Help 
-                                 students see that math is a way to communicate calculations among people.}
+                        @teacher{If students have questions about opening an Alice world, direct them to the instructions link. If they can't find the shark, suggest that they play around with the camera view menu. If they are still stuck after that, have them select the layout scene view. The shark should now be visible on the right.}
                         }
-                 @point{@student{Humans also use verbs like "throw", "run", "build" and "jump" to describe operations on these nouns. Mathematics has 
-                                 @vocab{functions} like addition and subtraction, which are operations performed on numbers. Just as you can "slice a piece 
-                                 of bread", a person can also "add four and five".}
-                         @teacher{}
-                        }
-                 @point{@student{A @vocab{mathematical expression} is like a sentence: it's an instruction for doing something.  The 
-                                 expression @math{4+5} tells us to add 4 and 5.  To @vocab{evaluate} an expression, we follow the instructions 
-                                 in the expression.  The expression @math{4+5} @vocab{evaluates to} @math{9}.}
-                       @teacher{}
-                       }
-                 @point{@student{@activity{What does @math{8*4} evaluate to?  What does @math{20-16} evaluate to?  What does @math{16-20} evaluate to?}}
-                         @teacher{}
-                        }
-                 @point{@student{Sometimes, we need multiple expressions to accomplish a task.  If you were to write instructions for making 
-                                 a sandwich, it would matter very much which came first: melting the cheese, slicing the bread, spreading the 
-                                 mustard, etc. The order of functions matters in mathematics, too. If someone says "four plus two minus one", 
-                                 they could mean several things:
-                                @itemlist[@item{Add four and two, then subtract one: @math{(4+2) - 1}}
-                                          @item{Add four to the result of subtracting one from two: @math{4 + (2-1)}}]
-                        @activity{Write an expression of your own that can mean several things.}}
-                        @teacher{}
-                        }
-                 
-                 @point{@student{Depending on which way you read the expression, you might have very different results!  This is a problem, 
-                                 because we often use math to share calculations between people.  For example, you and your cell phone company 
-                                 should agree upfront on how much you will pay for sending text messages and making calls.  Different results
-                                 might mean that your bill looks wrong.}
-                         @teacher{}}
-                 @point{@student{We avoid problems by agreeing on the order in which to use the 
-                                 different operations in an expression.  There are two ways to do this:
-                               @itemlist[#:style 'ordered
-                                         @item{We can all agree on an order to use}
-                                         @item{We can add detail to expressions that indicate the order}]
-                          @activity{Write down one reason why it is important to have rules about the order of operations.}}
-                         @teacher{}
-                        }
-                  @point{@student{@bitmap{images/PEMDASTriangle.png} Mathematicians didn't always agree on the order of operations, but now
-                                   we have a common set of rules for how to evaluate expressions.  The pyramid on the right summarizes the 
-                                   order.  When evaluating an expression, we begin by applying the operations written at the top of the 
-                                   pyramid (multiplication and division). Only after we have completed all of those operations can we 
-                                   move down to the lower level. If both operations are present (as in @math{4+2-1}), we read the expression
-                                   from left to right, @vocab{apply}ing the operations in the order in which they appear.}
-                         @teacher{This item covers PEMDAS (order of operations in ambiguous expressions).  You can skip this item if you
-                                  do not need to cover PEMDAS.}
-                         }
-                  @point{@student{ @activity[#:forevidence (list "A-SSE.1-2&1&3" "5.OA.1-2&1&2")]{In what order should we apply the functions in the following example? 
-                                    @math{19 \div 2 * 11 - 7 + 8}
-                                    @itemlist[#:style 'ordered
-                                              @item{@math{+ \div * - }}
-                                              @item{@math{\div * - +}}
-                                              @item{@math{\div * + -}}
-                                              @item{@math{* \div + -}}]}}
-                          @teacher{}
-                         }
-                @point{@student{@bitmap{images/FixedCircle.png} One way to indicate the order of operations in an expression is to first 
-                                 draw the expression as a diagram.  This diagram is called a @vocab{Circle of Evaluation}.  Here you can
-                                 see an example of a Circle of Evaluation, for the math expression @math{4-5}.}
-                        @teacher{[@(hyperlink "https://www.youtube.com/watch?v=AMFaPKHp3Mg" "Video")] This section benefits enormously from visual aids, diagrams, etc. Make sure you have plenty of board space to 
-                         draw examples!}
-                        }
-                @point{@student{Circles of Evaluation show the structure that's going on inside an expression.  All Circles of Evaluation have two rules:
-                                @bannerline{Circle Rule 1: Each circle must have one function, which goes at the top of the circle.}
-                                @bannerline{Circle Rule 2: The numbers are written below, in order from left to right.}
-                       @activity[#:forevidence "BS-CE&1&1"]{@bitmap{images/CircleBug.png}Which rule does this Circle of Evaluation break?}}
-                        @teacher{}
-                        }
-                @point{@student{@activity[#:forevidence (list "BS-CE&1&1" "5.OA.1-2&1&1")]{Try drawing the Circle of Evaluation for each of the following 
-                                                                     expressions:
-                                          @itemlist[#:style 'ordered
-                                                    @item{@math{6*4}}
-                                                    @item{@math{7-10}}
-                                                    @item{@math{5 + 8}}
-                                                    @item{@math{\frac{351}{-1} }}]
-                                          }
-                                 @bitmap{images/FixedCircle.png} Every Circle of Evaluation @vocab{evaluates to} the result of its 
-                                 corresponding expression.  For example, the circle on the right evaluates to @math{-1}, because 
-                                 the circle says to use subtraction (the function at the top) on the numbers in order (@math{4-5}).}
-                        @teacher{It's important for students to view the Circles of Evaluation as "just another way of writing arithemetic". 
-                                 Have students discuss whether associativity and commutativity still matter here (they do).}
-                        }
-                @point{@student{@bitmap{images/Nesting.png}To use multiple functions in the same expression, we can combine Circles
-                                 of Evaluation.  Look at the Circle of Evaluation you've written for @math{351 / -1}. We already 
-                                 know that the Circle for @math{4 - 5} will evaluate to @math{-1}, so we can @italic{replace the 
-                                 number with the expression.} Does this change what the expression evaluates to?}
-                        @teacher{From this point forward, the Circles of Evaluation are your assessment tool for Order of Operations. 
-                                 Quizzing students by asking them to correctly evaluate an expression is fraught with false negatives,
-                                 as many student might get the order right but may still have problems with basic calculations. This 
-                                 method is also vulnerable to Commutativity, since a student will correctly evaluate @math{1*2+2} 
-                                 even if they get the order of operations wrong! Circles of Evaluation have neither of these flaws,
-                                 as they put the emphasis where it should be: exercising a student's ability to see the structure 
-                                 inside the arithemetic.}
-                        }
-                @point{@student{@activity[#:forevidence (list "BS-CE&1&2" "5.OA.1-2&1&1")]{
-                                      @bitmap{images/fill-in-circle.png}Finish writing the Circle of 
-                                       Evaluation shown here, so that it represents @math{(23 + 7) * (13 - 5)}}}
-                        @teacher{}
-                       }
-                @point{@student{@bitmap{images/NestedCircle.png}What does this Circle of Evaluation evaluate to?  Let's review how
-                                 we evaluate a Circle:
-                                 @itemlist[@item{We know we are multiplying because that's the function at the top of the Circle.} 
-                                           @item{The Number @math{6} is the first number in the multiplication, because it's on 
-                                                            the left-hand side.}
-                                           @item{The second number in the multiplication is on the right-hand side.  The right-hand
-                                                 side has a separate circle, so we need to @vocab{evaluate} the number for that 
-                                                 circle.  The second number is therefore @italic{the result of adding 4 and 5}.}
-                                           @item{@math{4 + 5} (the inner circle) evaluates to @math{9}, and @math{6 * 9} (the outer 
-                                                  circle) evaluates to @math{54}.  This circle evaluates to @math{54}.}]
-                        @activity[#:forevidence (list "BS-CE&1&3" "A-SSE.1-2&1&3" "5.OA.1-2&1&1")]{
-                               @bitmap{images/NestedCircle2.png}Convert this Circle of Evaluation into an arithmetic expression.}
-                        }
-                        @teacher{Work through several of these examples with students, asking them to come up with arithmetic
-                                 expressions and then convert them into Circles, or giving them Circles and having them 
-                                 translate them back into arithmetic.  When you talk about Circles, be sure to consistently use
-                                 the term @italic{function} for what's on top, rather than similar terms like "operation", "symbol",
-                                 "procedure", "name", etc.  The Circles of Evaluation will help students see the similarity between
-                                 arithmetic functions (like @math{+}) and algebraic functions (like @math{f}) if you use 
-                                 terminology carefully.}
-                        }
-                @point{@student{@activity[#:forevidence (list "BS-CE&1&3" "A-SSE.1-2&1&3" "5.OA.1-2&1&1")]{
-                              Match the following Circles of Evaluation with the corresponding arithmetic expressions:
-                                  @(circeval-matching-exercise/math 
-				    (list (math "9 * (4 - 3)")
-					  (math "(9 * 4) - 3")
-					  (math "(9 - 3) * 4")
-					  (math "(2 + 4) / (6 - 3)")
-					  (math "-5 * 2"))
-				    (list "(/ (+ 2 4) (- 6 3))"
-					  "(- (* 9 4) 3)"
-					  "(* -5 2)"
-					  "(* 9 (- 4 3))"
-					  "(* (- 9 3) 4)"))}
-                        }
-                        @teacher{}
-                        }
-             ]
+                                                                                                                                                                ]
          }
 
 @lesson/studteach[
