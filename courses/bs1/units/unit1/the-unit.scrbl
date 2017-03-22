@@ -1,6 +1,6 @@
 #lang APCSP/lib
 
-@title{Unit 1: Videogames and Coordinate Planes}
+@title{Unit 1:Intro To CS Principles Videogames and Coordinate Planes}
 
 @declare-tags[]
 
@@ -33,6 +33,7 @@
                                          @item{Ask students about their favorite videogames. Be open about the scale of a modern game: they cost millions of dollars, are built by huge teams of programmers and artists, and are developed over years.}
                                          @item{Set expectations about what can be accomplished in a single, introductory programming class.}]}
                      }
+            @point{@student{ This is a test of editing bootstrap}}
               ]
          }
 

@@ -1,7 +1,7 @@
 #lang APCSP/lib
 @declare-tags[]
 
-@title{Unit 5: Snails, Loops, and Indexes}
+@title{Unit 5: Game Animation}
 
 @unit-overview/auto[#:lang-table (list (list "Number" @code{+ - * / sqr sqrt expt})
                                        (list "String" @code{string-append string-length})
@@ -11,14 +11,13 @@
 
 @unit-lessons{
 @lesson/studteach[
-     #:title "Introduction"
+     #:title "Bug Hunting"
      #:duration "20 minutes"
      #:overview ""
      #:learning-objectives @itemlist[@item{Gain more experience understanding and correcting programming errors}]
      #:evidence-statements @itemlist[@item{Students will be able to read error messages for basic syntax errors}
                                      @item{Students will be able to edit programs to eliminate basic syntax errors}]
-     #:product-outcomes @itemlist[@item{Use lists to organize and group objects together}
-                                                   ]
+     #:product-outcomes @itemlist[]
      #:standards (list "BS-PL.1" "BS-PL.2" "BS-PL.3" "BS-IDE")
      #:materials @itemlist[@item{Pens/pencils for the students, fresh whiteboard markers for teachers}
                             @item{Class poster (List of rules, language table, course calendar)}
