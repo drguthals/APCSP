@@ -226,7 +226,7 @@ From there you could easily translate into Alice code blocks:
 		@teacher{Give students approximately 30 minutes to work on pseudocode for the rest of the video. Have them talk to each other if they get stuck. If they haven't finished in the allocated time, they should move on to the next section anyway. They can finish writing pseudocode later as part of the process to recreate the movie. If some students finish early they can start translating pseudocode into Alice code on the computers.}}
                ]
          }
-}
+
 
 @lesson/studteach[
      #:title "Instructional Video"
@@ -248,7 +248,7 @@ From there you could easily translate into Alice code blocks:
                         @teacher{It is suggested that you watch the video as a class. Some students may want to start themselves without watching the video. Use your discretion in allowing this. It may be easier to watch the video as a class once or twice first, then release students to get started. They may rewatch the video several times as they attempt coding for themselves.}
 	}               ]
          }
-}
+
 @lesson/studteach[
      #:title "Try it Yourself"
      #:duration "200 minutes"
@@ -269,7 +269,7 @@ From there you could easily translate into Alice code blocks:
                         @teacher{This is the final section of this project, but it will likely take a comparable amount of time to the time already spent on this lesson. Students are to work primarily by themselves, but are encouraged to consult with each other if they run into difficulties. Before they ask for your help, they should have exhausted all other resources available to them. If students do come to you for help, the code for the original movie can be found @bold{here}. Comparing the correct code to the student's code will often give you an opportunity to point out where they went wrong and suggest what they might do to fix it.}
 	}               ]
          }
-}
+
 @lesson/studteach[
      #:title "The do-together Block"
      #:duration "25 minutes"
@@ -290,7 +290,7 @@ From there you could easily translate into Alice code blocks:
                         @teacher{Have students engage with this section after they've already made progress in recreating the movie. Once they reach the part where the shark and whale start dancing, introduce this section. Students may complete this section at different times depending on how fast they complete the first part of the movie. This section primarily involves watching videos, so the class does not have to go through this together.}
 	}               ]
          }
-}
+
 @lesson/studteach[
      #:title "Adding Methods"
      #:duration "30 minutes"
@@ -316,7 +316,36 @@ From there you could easily translate into Alice code blocks:
 		@teacher{If students are concerned about where to partition their code, you can look at the solution world and guide them based on that, but it doesn't really matter as long as their partitions make some sense based on the names of the methods.}}
                ]
          }
-}
+@lesson/studteach[
+     #:title "Introducing Loops"
+     #:duration "30 minutes"
+     #:overview "Students will alter the dance party to repeat a sequence multiple times."
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{Now that your code is segmented into methods, let's make one last change to your program. We're going to alter the danceParty method to make the shark and whale do the cool twisty-turny thing multiple times. You might be thinking, okay, so I'll just copy and paste the code for that and then I'll be good to go! You're not wrong, but that can get unreasonable pretty quickly. What if we asked you to have that sequence repeat 100 times? It would be pretty ridiculous to copy and paste the same lines of code 100 times and try to keep track of how many you have. Fortunately, us programmers are pretty lazy and always looking for a way to make the computer do more of the work for us. For this problem of repeating code, we'll use a @italic{loop}.}
+                        @teacher{Students need to have their methods finished before beginning this section as it asks them to specifically modify one of the methods.}
+	@point{@student{So what is a loop? Well, there are a few different types, but the one we'll be using here is called a count loop in Alice. You'll give it a number to count up to and it will repeat the lines of code you put inside that number of times. To test it out, in myFirstMethod drag a count loop to the very top (you can find this loop in the bottom bar, called count). Have it count up to 3, and add a line of code to make the whale spin (turn) around once. Run your program. You should notice that the whale spins around a total of three times, the result of having it spin around once executed three times by the loop. Now delete that loop and go to the danceParty method. Add a count loop that counts up to 5 right before the do-together blocks. Drag all the do-together blocks into the loop, leaving everything else outside it. Run your program, then turn to your workbook and answer the following questions:
+		@itemlist[@item{Did your program run as you expected it to?}
+			@item{What changed from before you added the count loop?}
+			@item{How could you change your code to make the specified dance sequence execute 10 times instead of 5?}]
+		 }
+		@teacher{}
+	}
+	@point{@student{Now let's assume that the whale is a quick learner and catches on to the shark's move after the first time. Change your code so that after the first repetition of the move, the shark and whale do it together. This may involve moving some code back out of the loop and combining do-together blocks. Remember, we still only want the move to happen a total of 5 times.}
+		@teacher{The key to this step is that the code currently in the loop needs to be duplcated right above the loop so the shark can "teach" the whale his move. Then the do-together blocks in the loop need to combined from 4 blocks into 2 so the shark and whale are dancing simultaneously. The loop should also be changed to only count up to 4 since one repetition is done before the loop starts.}
+	}
+	}               ]
+         }
 
 @lesson/studteach[
      #:title "Extra Credit"
