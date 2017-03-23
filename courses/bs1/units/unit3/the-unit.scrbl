@@ -1,16 +1,17 @@
 #lang APCSP/lib
 @declare-tags[]
 
-@title{Unit 3: Introduction to Definitions}
+@title{Unit 3: Alice Boat Race Tutorial Part 1}
 
 @unit-overview/auto[#:lang-table (list (list "Number" @code{+ - * / sqr sqrt expt})
                                        (list "String" @code{string-append string-length})
                                        (list "Image"  @code{rectangle circle triangle ellipse star text scale rotate put-image}))]{
-  @unit-descr{Students are introduced to the Definitions area, and learn the syntax for defining values of various types.  They are also introduced to the syntax of defining functions and creating examples.}
+  @unit-descr{By the time your students have finished this project they will have an understanding of Methods, lists, for each loops, user input, events, if-statements, while-loops, boolean expressions, printing directions to users, commenting, mathematical expressions. The end of the lesson provides an opportunity to use these topics freely to create an original ending to the race.
+}
 }
 @unit-lessons{
 @lesson/studteach[
-     #:title "Review"
+     #:title "Introduction"
      #:duration "5 minutes"
      #:overview ""
      #:learning-objectives @itemlist[]
@@ -27,9 +28,7 @@
                 @pacing[#:type "challenge"]{@itemlist[@item{}]}
                 )
       ]{
-        @points[@point{@student{So far, you've seen the Circles of Evaluation, learned about Contracts and experimented with multiple
-                                datatypes. Make sure you remember what each of those are, and look back at previous lessons for a refresher 
-                                if you need.
+        @points[@point{@student{In this activity you will be learning about many new programming techniques! Before we start let’s turn to page ### in your notebook. 
                                 @activity[#:forevidence (list "BS-PL.2&1&1" "6.NS.5-8&1&2")]{
                                      Can you think of three functions that draw shapes? See if you can write their contracts without
                                      needing to look back at your Contracts page. What type of data is always surrounded in quotes?
@@ -43,7 +42,7 @@
 
        
 @lesson/studteach[
-     #:title "Defining Variables"
+     #:title "Watching a Movie"
      #:duration "10 minutes"
      #:overview "Students define names for simple values (Numbers, Strings and Images) and use them in expressions."
      #:learning-objectives @itemlist[]
