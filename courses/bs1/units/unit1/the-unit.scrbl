@@ -291,6 +291,32 @@ From there you could easily translate into Alice code blocks:
 	}               ]
          }
 }
+@lesson/studteach[
+     #:title "Adding Methods"
+     #:duration "30 minutes"
+     #:overview "Once students finish coding their program, they will add methods in to make it neater."
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{Congratulations on recreating the movie! Right now, all your code should be in myFirstMethod. This method gets run automatically whenever you run your program. You may have noticed that your code is just one large block. This is reasonable for a short program like the one you just wrote, but what if your program was 5 or 10 times longer? Operating Systems like Windows are comprised of millions of lines of code? Do you think that code is just one GIANT block? No, that would make it near impossible to ever find and edit specific pieces. So what's the solution? Methods. Methods are essentially smaller blocks of code that perform a specific function and can be called from other methods. You've actually already used them! All the procedures like @italic{move}, @italic{say}, and @italic{turn} are methods you're calling from myFirstMethod. Notice how they are informatively named so that you can be fairly sure of what it will do without needing to look at the code it contains. Your next task will be to segment your current code into methods and then call those methods from myFirstMethod so that the only lines of code in myFirstMethod are method calls.}
+                        @teacher{Students should be 100% done with recreating the movie before moving on to this part. It may seem confusing at first because it is an entirely new concept; however you can reassure the students that this part will be much more straightforward than what they've done so far and that they won't have to add many new lines of code.}
+	}
+	@point{@student{Let's add a new method to your scene! Go to the Scene tab and under procedures, click Add Scene Procedure. In Alice, procedure is synonymous with method. Let's name it whaleAsksDolphinToDance. Alice should open this new method in a new tab. This method will contain all the code necessary for the whale to ask the dolphin to dance, the dolphin to accept, and the whale to be excited about it. Drag the necessary blocks of code from myFirstMethod into this new method (hint: use the clipboard in the top right corner). Finally, delete these blocks of code from myFirstMethod and add a call to whaleAsksDolphinToDance at the very top of myFirstMethod. Go to the "this" tab in the left bar and under procedures you can find whaleAsksDolphinToDance at the bottom of Scene's Editable Procedures. Run your program to check that it behaves exactly the same.}
+		@teacher{If students find that their program doesn't run identically it is likely because they forgot to call the new method from myFirstMethod, or they didn't remove the lines of code they added to whaleAsksDolphinToDance from myFirstMethod.}}
+	@point{@student{See, adding a method wasn't too hard! Let's add a few more. Add whaleGetsRejected, sharkMeetsWhale, danceParty, and punnyConclusion to the Scene. The names should pretty much explain which blocks of code you should put into each method, but you can use your discretion as necessary. When you're done, myFirstMethod should contain calls to 5 different methods. See how much neater it looks now!}
+		@teacher{If students are concerned about where to partition their code, you can look at the solution world and guide them based on that, but it doesn't really matter as long as their partitions make some sense based on the names of the methods.}}
+               ]
+         }
+}
 
 @lesson/studteach[
      #:title "Extra Credit"
