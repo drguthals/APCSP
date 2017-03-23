@@ -14,7 +14,7 @@
      #:learning-objectives @itemlist[]
      #:evidence-statements @itemlist[]
      #:product-outcomes @itemlist[]
-     #:standards (list "A-SSE.1-2" "BS-CE")
+     #:standards (list)
      #:materials @itemlist[]
      #:preparation @itemlist[]
      #:prerequisites (list)
@@ -212,6 +212,66 @@
 	@point{@student{Take this time to add in any additional code to your event handler. Once you finish, move on to the testing section.}
 		@teacher{Student solutions may vary, so it is recommended that you grade based on how their program runs rather than on what their code looks like.}
 	}
+                                       ]}
+@lesson/studteach[
+     #:title "Testing"
+     #:duration "30 minutes"
+     #:overview "Students are given an opportunity to test their code for correctness in a strucutured manner meant to guide them towards finding possible mistakes."
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{This game has many parts to it, i.e. the methods you wrote, and as such there is potential for something to go amiss at many different points in your game. This warrants more extensive testing than previous programs you've written. To test your program, you'll want to essentially play the game you've just made and try to break it. This might sound counterintuitive, because why would you want to break a game you've made yourself? This is necessary because any other person playing your game is unpredictable and may not follow the instructions exactly. It is your job to make sure that something like the user clicking on a tree will not have any effect on the game. Turn to page 456 in your workbook and complete all the test cases given, then follow the directions to analyze the testing process.}
+                        @teacher{In this section the students are essentially playing their game and recording what happens when they do different things. The "What Should Happen" column of the table is how a correct game would function, what they were aiming for. The "Passed?" column should be true/yes if what happened matches what should happen, and false/no if they don't match. For the analyzing portion, students only need to explain the test cases that did not pass UNLESS all their test cases passed, in which case they must pick one passed test case to analyze.}
+                        }
+                                       ]}
+@lesson/studteach[
+     #:title "Debugging"
+     #:duration "30 minutes"
+     #:overview "After testing their program to find mistakes, students are guided through the debugging process to fix their mistakes."
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{Debugging is a critical aspect of computer science. Unfortunately, it can also be one of the most frustrating and time-consuming parts of programming. With the correct approach, however, it doesn't have to be so painful. Referring to the table on page 456 of your workbook that you just filled out, attempt to fix any test cases that did not initally pass. You should have already outlined what the problem was and what you could do to fix it, so all you have to do in this step is implement that change. You may not fix the problem on your first try, and that's okay! Debugging is a whole process. Hopefully with each new attempt at a fix, you learn a little more about what the underlying problem is and gain new ideas for how to correct it. For this part of the assignment, it is okay to talk to your peers about the problems you're seeing and work towards a solution together. Try to refrain from showing others your code and looking at other students' code, but feel free to talk in depth about what isn't working as expected. Other students will likely have the same problem, and some may have already solved it!}
+                        @teacher{If a student didn't have any failed test cases from the "Testing" section, then have them help other students debug their programs. Students may get very frustrated in this section, so remind them that it is natural for debugging to take awhile and they just have to keep pushing through. For this section it is okay for students to work together to find a solution. If they get really stuck, refer back to the reference code and use that to give them hints as to what they may be missing.}
+                        }
+                                       ]}
+@lesson/studteach[
+     #:title "Conclusion"
+     #:duration "5 minutes"
+     #:overview ""
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{Congratulations, you just made your first video game! The key difference in this project from previous ones we've done was adding user input. Hopefully, though, you've discovered that it is not so difficult to deal with event listeners; think of them as a special kind of method. You should be impressed that you made a game you can show to your friends and have them play!}
+                        @teacher{As this was the students' first introduction to making a video game, it was likely very difficult both conceptually and implementation-wise. Reinforce the idea that they just successfully learned how to do something new and should be impressed with themselves. With more practice, using event listeners will become simpler and less confusing.}
+                        }
                                        ]}
 
 }
