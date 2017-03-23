@@ -131,6 +131,88 @@
 		@teacher{}
 	}
                                        ]}
+@lesson/studteach[
+     #:title "Video Game Tips"
+     #:duration "30 minutes"
+     #:overview "Students will learn what some of the key parts of videogames are."
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{There are some common traits most, if not all, successful videogames share. Perhaps the most important are the instructions. When you start playing a new videogame, you need to know @italic{how} you are supposed to play it. If you're on a computer, do you use the cursor and mouse or press certain keys? What is your objective? As our game is relatively simple, the instructions for it will also be simple. In fact, you don't even need a new method for this, you can just put code directly in myFirstMethod, which gets called when the player starts the program, giving them directions right at the start. The objective of this game is for the bear to catch salmon and eat them. Keeping in mind that we have a mouseClickOnObject event listener, what instructions do you think you should give the user that will enable them to play the game? Turn to your partner and discuss. After you've come up with what instructions you will need, add them into myFirstMethod. Hint: you can have one of the animals in your world say the instructions.}
+                        @teacher{This part is meant to be relatively simple. If a student is having trouble, it is likely because they are overthinking it. As students are working in pairs, it is expected that their instructions will be similar, if not identical. The idea here if for an animal in the worl to say something along the lines of "Click on the salmon to feed the bear." In the reference solution, one of the squirrels says, "Help the bear catch the salmon by clicking on the salmon."}
+                        }
+	@point{@student{Another important part is the ending. You need to communicate to the player that they have finished the game. There are many different ways to do this, so get creative! First, you need to decide when the game will be over. For this project, it may be easiest to end the game after the bear eats a certain number of fish and becomes "full". Think about how you would check for that to be true, i.e. how you will call the "end" method. Then add code to the "end" method that communicates to the user that the game is over. You may find it useful to add a variable to keep track of the condition that decides when the game ends, then check that condition each time the bear catches a fish, for example.}
+		@teacher{This part will be a little more complicated than the first part. Students should already have the end method present in their program and will just need to add code to it. The reference finish method looks like @bold{this}. Students may have come up with something completely different, but as long as the program communicates to the player that the game is over, it's fine. Finish (or end) should be called from the event listener. Students will most likely need an if statement to check if the number of fish eaten (a variable they could add) is equal to some predetermined number of fish. If that condition is true, then they should call the end/finish method.}
+	}
+                                       ]}
+
+@lesson/studteach[
+     #:title "Coding the Game"
+     #:duration "90 minutes"
+     #:overview "Students will add code to the methods controlling the middle part of the game."
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{Once you have the start and end of your game set up, it's time to code the actual game part. Below we have listed specifications for the catchSalmon and reset methods. The code you add to these methods must meet these specifications, but you are free to add additional functionality if you wish. If you have different methods to implement, then the combination of those methods must meet the combination of specifications blow.}
+                        @teacher{This section is meant to be pretty open-ended. Student solutions will vary. When grading, it is recommended you run the program to check if the specifications are met rather than just looking at the code.}
+                        }
+	@point{@student{catchSalmon: @itemlist[@item{Bear moves to location of salmon}
+				@item{Bear brings salmon to mouth before salmon disappears (is eaten)}			@item{Bear makes some sort of indication of enjoyment from consuming salmon}		@item{Bear resets to natural position}		
+				@item{Update variable(s) to note that bear ate a salmon}]}
+		@teacher{}
+	}
+	@point{@student{reset: @itemlist[@item{Move bear out of way of relocated salmon}
+			@item{Move salmon to new location, using the locations list}
+			@item{Make salmon visible}
+			@item{Update variable keeping track of event listener's active state}]}
+		@teacher{}
+	}
+                                       ]}
+
+@lesson/studteach[
+     #:title "Finishing the Event Listener"
+     #:duration "20 minutes"
+     #:overview "Students will update the event listener to call the methods at an appropriate time and incorporate variables."
+     #:learning-objectives @itemlist[]
+     #:evidence-statements @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{Your event listener should already have calls to the methods you wrote in the previous sections in it. Now that you've actually written the methods, however, you may with to add additional conditional (if) statements in as well. Consider what has to happen for each method to be called. You may want to create a variable to determine when the event listener is active and when it is not. For example, if the bear is in the middle of eating the salmon, you don't want to start over if the user happens to click on the salmon again. You might also want to check if the game is over.}
+                        @teacher{This first part asks students to add in if statements and variables. One variable should keep track of whether or not you want the event listener to be active, and the program should only execute the code inside the event listener if that variable is true. The other variable should keep track of the number of salmon the bear has eaten so far, and once that variable equals 5, for example, the game should end. This can be checked using another if statement.}
+                        }
+	@point{@student{You also want to make sure that you only catch the salmon when it is the salmon that is clicked on, not some other object in the world. To do this, use an if statement comaparing SModels. For example, @italic{event getModelAtMouseLocation == this.cap} evaluates to true if the carp (salmon) was clicked on and false if any other object in the world was clicked on. You can find @italic{event getModelAtMouseLocation} from the header of the event listener (you may have to scroll to the right to see it)}
+		@teacher{The final if statement the students must add should check to make sure the salmon was clicked on. It would not make sense for the bear to eat the salmon if a tree or a squirrel was clicked on.}
+	}
+	@point{@student{Take this time to add in any additional code to your event handler. Once you finish, move on to the testing section.}
+		@teacher{Student solutions may vary, so it is recommended that you grade based on how their program runs rather than on what their code looks like.}
+	}
+                                       ]}
 
 }
 
