@@ -124,16 +124,7 @@
      #:evidence-statements @itemlist[]
      #:product-outcomes @itemlist[]
      #:standards (list "A-SSE.1-2" "BS-CE" "5.OA.1-2")
-     #:exercises (list (make-exercise-locator "Order-of-Operations" "complete-coe-from-arith1")
-                       (make-exercise-locator "Order-of-Operations" "complete-coe-from-arith2")
-                       (make-exercise-locator "Order-of-Operations" "arith-to-coe1")
-                       (make-exercise-locator "Order-of-Operations" "arith-to-coe2")
-                       (make-exercise-locator "Order-of-Operations" "arith-to-coe3")
-                       (make-exercise-locator "Order-of-Operations" "coe-to-arith1")
-                       (make-exercise-locator "Order-of-Operations" "coe-to-arith2")
-                       (make-exercise-locator "Order-of-Operations" "match-arith-coe1")
-                       (make-exercise-locator "Order-of-Operations" "coe-to-math-answer1")
-                       (make-exercise-locator "Order-of-Operations" "coe-to-math-answer2"))
+     #:exercises (list)
      #:materials @itemlist[]
      #:preparation @itemlist[]
      #:pacings (list 
@@ -169,11 +160,7 @@
      #:materials @itemlist[]
      #:preparation @itemlist[]
      #:prerequisites (list "Order of Operations")
-     #:exercises (list (make-exercise-locator "Intro-to-Programming" "complete-code-from-coe1")
-                       (make-exercise-locator "Intro-to-Programming" "coe-to-code1")
-                       (make-exercise-locator "Intro-to-Programming" "coe-to-code2")
-                       (make-exercise-locator "Intro-to-Programming" "coe-code-matching1")
-                       )
+     #:exercises (list)
      #:pacings (list 
                 @pacing[#:type "remediation"]{@itemlist[@item{}]}
                 @pacing[#:type "misconception"]{@itemlist[@item{}]}
