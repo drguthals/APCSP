@@ -44,96 +44,34 @@
 @lesson/studteach[
      #:title "Watching a Movie"
      #:duration "10 minutes"
-     #:overview "Students define names for simple values (Numbers, Strings and Images) and use them in expressions."
+     #:overview "Students observe and recognize different objects (boat, starfish, timer) and write them down."
      #:learning-objectives @itemlist[]
-     #:evidence-statements  @itemlist[@item{Students will be able to define names for Number, String and Image values.}
-                                       @item{Students will be able to identify the name, domain, range, and variable name for a function, when presented with a completed Design Recipe.}
-                                      @item{Students will be able to explain what happens when the "Run" button is pressed.}]
+     #:evidence-statements  @itemlist[]
      #:product-outcomes @itemlist[]
-     #:standards (list "BS-PL.3" "BS-IDE")
-     #:materials @itemlist[@item{Pens/pencils for the students, fresh whiteboard markers for teachers}
-                            @item{Class poster (List of rules, language table, course calendar)}
-                            @item{Editing environment (WeScheme or DrRacket with the bootstrap-teachpack installed)}
-                            @item{Language Table (see below)}]
+     #:standards (list)
+     #:materials @itemlist[]
      #:preparation @itemlist[]
-     #:prerequisites (list "Intro to Programming" "Contracts")
-     #:pacings (list 
-                @pacing[#:type "remediation"]{@itemlist[@item{}]}
-                @pacing[#:type "misconception"]{@itemlist[@item{}]}
-                @pacing[#:type "challenge"]{@itemlist[@item{}]}
-                )
+     #:prerequisites (list)
+     #:pacings (list)
       ]{
-        @points[@point{@student{Suppose we want to make an image that had fifty identical, solid red triangles. You would have to write 
-                                @code{(triangle 50 "solid" "red")} fifty times! To make matters worse, any change to those triangles would 
-                                have to be repeated for all fifty expressions! Good programmers know that their effort is better spent 
-                                elsewhere, so they made sure that programming languages have a way to avoid all that repetition.  
-                                They write something once, define it as a shortcut in the language, and then use the shortcut wherever they want.}
+        @points[@point{@student{This movie shows the finished version of the project you are about to begin. Let’s dissect the video and think about what’s going on in it.}
                         @teacher{}}
-                 @point{@student{We name values in our language using @vocab{define} statements.  Let's look at 
-                                                                      @editor-link[#:definitions-text "(define shape1 (triangle 50 \"solid\" \"red\"))\n"
-                                                               #:interactions-text ""
-                                                               "an example of a definition"]
-                               , that defines @code{shape1} to be a solid red triangle. When you click "Run", you can evaluate @code{shape1}
-                               in the Interactions area and the computer will show you the triangle. What do you think would happen if you
-                               evaluated @code{shape1} @italic{without} clicking "Run"?
+                 @point{@student{Let’s begin by writing down all of the objects we see in the beginning of the video. List all of them. Here’s a screenshot: @vocab{add picture}
                                }
-                         @teacher{Make sure students see what happens when @code{shape1} is evaluated without first clicking "Run", so they
-                                 can read and understand the error. Similarly, have them change the definition and evaluate @code{shape1}
-                                 again - still without clicking "Run". It's important for them to understand that running a program
-                                 causes the computer to @italic{read the definitions}, and that any change requires it to re-read them.
-                                 }
                         }
-                 @point{@student{Definitions go in the left area in your editor. This is called the @vocab{Definitions area}.        
-                               @activity[#:forevidence (list "BS-PL.3&1&1")]{
-                                     @itemlist[@item{Enter the @code{shape1} definition into the @vocab{Definitions area}.}
-                                                @item{Click "Run" to have the computer read that definition.}
-                                                @item{What do you think will happen when you evaluate @code{shape1} in the Interactions area?}
-                                                @item{Add a new line to the definitions area, just below the definition of @code{shape1}. Add a new 
-                                                      definition called @code{shape2}, and define it to be a solid, blue circle of radius 20.}
-                                                @item{Click "Run", and try evaluating @code{shape2.}}
-                                                @item{On the next line, define a new value called @code{age} to be the number of years old that you are.}
-                                                @item{On the next line, define a new value called @code{name} to be the String that represents your name.}]
-                                      }
-                               
-                               @bannerline{Each time "Run" is clicked, the computer reads all of the definitions and adds them to the language. If a 
-                                      definition is changed, the computer will keep using the previous definition until the next time "Run" is clicked.}
+                 @point{@student{Fill out this table with SIX objects you see.}
+                        @teacher{The text blocks count as objects.}
+                        }
+                @point{@student{Next, let’s think about the methods that we’re going to need to implement in order to match the functionality of the Alice program in the video. List four things you notice that change and a method you would need to make that thing change. Here’s a link to the video for you to rewatch LINK
                           }
-                         @teacher{}
-                        }
-                 @point{@student{@activity[#:forevidence (list "BS-PL.3&1&1" "BS-IDE&1&2")]{
-                                    One a new line in the Definitions area, define a value called @code{eye-color} to be the color of your eyes.  
-                                    Don't hit "Run" yet!  
-                                    @itemlist[@item{Go into the Interactions area and try evaluating @code{eye-color}.  You should get an error 
-                                                    message that the computer doesn't know about @code{eye-color}, because you didn't click "Run" 
-                                                    after adding the definition.}
-                                              @item{Click "Run".}
-                                              @item{Try asking for @code{eye-color} in the Interactions area again.  This time, you should not get the error.}]}
-                                 Definitions are useful because we can reuse them in other expressions.  For example, we could use @code{eye-color} 
-                                 inside another expression, such as @code{(circle 10 "solid" eye-color)}.  Let's practice using definitions inside other expressions.
-                                 }
-                        @teacher{}
-                        }
-                @point{@student{@activity[#:forevidence (list "BS-PL.3&1&1" "BS-IDE&1&1")]{
-                                    Create the following definitions in the Definitions area, and check them out in the Interactions area:
-                                    @itemlist[@item{Define a value called @code{prize} to be a solid yellow star (you pick the size).}
-                                              @item{Define a value called @code{big} that uses @code{scale} to make your @code{prize} three times larger.}
-                                              @item{Define a value called @code{tilt} that uses @code{rotate} to turn your big yellow star by @code{45} degrees.}
-                                              @item{Type @code{tilt} in the Interactions area, and make sure you get a large, tilted, yellow star.}
-                                              @item{It turns out that green stars are more popular as prizes than yellow stars.  Change the expression in your @code{prize} definition to make the star green instead of yellow.  Click "Run" so the computer will read your new definition.}
-                                              @item{Now type @code{tilt} in the Interactions area again.  What color star did you get?  If you defined each of @code{big} and @code{tilt} to use your definitions, you should get a tilted green star!  If you didn't get a green star, try to fix your definitions to make that happen.}
-                                             ]
-                                   }
-                          }
-                        @teacher{It is important to give students ample time to experiment with @code{define}.  Students need to understand that they can use 
-                                 the defined name in place of the value.  Have them define several values (each of different types), and then practice using 
-                                 them inside other expressions.}
+                        @teacher{It's important for students to develop technique that allows them to visualize and plan ahead when coding. By knowing what objects they will be using and how those objects should behave, students can develop mental plans for how their code will be implemented.}
                         }
                  ]
 }
        
 @lesson/studteach[
-     #:title "Defining Variables (Algebra)"
-     #:duration "10 minutes"
+     #:title "Debugging activity"
+     #:duration "5 minutes"
      #:overview ""
      #:learning-objectives @itemlist[]
      #:evidence-statements @itemlist[]
@@ -149,30 +87,11 @@
                 )
       ]{
         @points[
-             @point{@student{In our programming language, variables are defined by: 
-                             @bannerline{@code[#:multi-line #t]{(define x 4)
-                                                                (define y (+ 4 9))
-                                                                (define z (* x 2))}}
-                             Values can be fixed (like the first example), the result of an expression (the second), or even be defined in terms of other 
-                             variables (the third). We can do the same things in algebra:
-                             @bannerline{@math{x = 4}
-                                          @math{y = 4+9}
-                                          @math{z = x \times 2}}
-                             }
+             @point{@student{Before we begin let’s introduce the concept of debugging! As humans, we will make mistakes in our code and it is important to be able to find those mistakes. The instructions for this project will purposely include a handful of bugs so that you can develop some experience with debugging. Every time we encounter a bug we will turn to page ### in our notebooks and brainstorm about what’s happening in our code.}
                      @teacher{}
                      }
-              @point{@student{@activity[#:forevidence (list "7.EE.3-4&1&4" "A-SSE.1-2&1&1")]{Convert the following three Algebra definitions into Racket definitions:
-                                       @itemlist[@item{@math{dollars = 16.50}}
-                                                 @item{@math{feet = 2 \times 3}}
-                                                  @item{@math{inches = feet \times 12}}]
-                                       }}
-                      @teacher{For this activity write all Racket expressions on one side of the board, and all algebra expressions on the other.
-                              You'll want to line them up as closely as possible, to reinforce the connection between the two languages.}
-                     }
-            @point{@student{@activity{Turn to @worksheet-link[#:name "Translating-to-Algebra"] in your workbooks. 
-                                      You will see a bunch of value definitions written in code - take 2 minutes to convert this into math. GO!}}
-                    @teacher{[@(hyperlink "https://www.youtube.com/watch?v=xRUoQO1AdVs" "Video")]}
-                    }]
+              @point{@student{Here’s the table that we will fill out:}
+                      }]
          }
      
 @lesson/studteach[
