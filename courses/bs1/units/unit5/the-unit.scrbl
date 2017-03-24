@@ -17,14 +17,14 @@
      #:learning-objectives @itemlist[@item{Gain more experience understanding and correcting programming errors}]
      #:evidence-statements @itemlist[@item{Students will be able to read error messages for basic syntax errors}
                                      @item{Students will be able to edit programs to eliminate basic syntax errors}]
-     #:product-outcomes @itemlist[@item{Use lists to organize and group objects together}
-                                                   ]
+     #:product-outcomes @itemlist[@item{Use lists to organize and group objects together}                 ]
      #:standards (list "BS-PL.1" "BS-PL.2" "BS-PL.3" "BS-IDE")
      #:materials @itemlist[@item{Pens/pencils for the students, fresh whiteboard markers for teachers}
                             @item{Class poster (List of rules, language table, course calendar)}
                             @item{Language Table (see below)}
                             @item{Bug Hunting [Bugs.rkt from @resource-link[#:path "source-files.zip" #:label "source-files.zip"] | @(hyperlink "http://www.wescheme.org/view?publicId=JCTcwYc57r" "WeScheme")] file preloaded on students' machines, as the front-most window.}]
-     #:preparation @itemlist[@item{Students are logged into WeScheme.org, OR have opened DrRacket.}]
+     #:preparation @itemlist[@item{Students are logged into WeScheme.org, OR have opened DrRacket.}
+                            @item{Students are familiar with Alice 3 and have some understanding of objects}]
      #:prerequisites (list "Defining Functions")
      #:pacings (list 
                 @pacing[#:type "remediation"]{@itemlist[@item{}]}
@@ -32,28 +32,25 @@
                 @pacing[#:type "challenge"]{@itemlist[@item{}]}
                 )
       ]{
-        @points[@point{@student{Debugging (finding and correcting problems in code) is an important part of programming, so it's a good idea to practice finding bugs in code. 
+        @points[@point{@student{Hi there! In this assignment, we are going to look at making another Alice world, except this one will introduce you to randomness, and how we can use lists of objects in our worlds to group similar items together. We’ll also introduce you to indexing, which is how we can access an individual object in a list. You’ll also see how a for each and counted loop work. You’ll also get to see how methods (procedures) can be used in Alice worlds to make object be modified, or do things, but also learn why we use methods in Computer Science, and how they can save us lots of time!  
                                 @activity[#:forevidence (list "BS-IDE&1&2" "BS-PL.1&1&2" "BS-PL.2&1&1" "BS-PL.2&1&2" "BS-PL.3&1&3")]{
-                                        Open the @editor-link[#:public-id "lQUC6RJArG" "Bug Hunting"] program in a new window, and see if you can find the 
-                                        bug in each expression. Click "Run" and read the error message carefully! After you fix each one, clicking 
-                                        Run will show you the error message for the next bug.}}
-                        @teacher{Make sure students understand that the goal is not to FIX the bugs, but rather just to find them.}
+                                        First, get started by watching the video of what our Alice world will do, you can find it here(HYPERLINK). As you’re watching it, think about how parts of the video (what the objects are doing) are repetitive, and how maybe, they could be represented in loops. After doing so, fill out the table below: INSERT IMAGE OF TABLE HERE}}
+                        @teacher{Make sure students interpret the video correctly, and have an understanding of objects.}
                         }
                  ]}
 
 @lesson/studteach[
-     #:title "Danger and Target Movement"
+     #:title "Lists"
      #:duration "30 minutes"
-     #:overview "Students model animation in the coordinate plane, and write a simple linear function that animates their Danger."
-     #:learning-objectives @itemlist[@item{Students learn to move game elements through functions that compute attributes in one frame from attributes in the previous frame}]
+     #:overview "Students learn more about lists, and how to create them in Alice 3."
+     #:learning-objectives @itemlist[@item{Students learn the functionality of lists in Alice 3}]
      #:evidence-statements @itemlist[@item{Students will be able to write functions that take in one dimension of a game element's coordinate and produce the next coordinate value in that dimension}
                                      @item{Students will learn how to control speed of movement through functions}]
-     #:product-outcomes @itemlist[@item{Students will add danger movement to their games}
-                                  @item{Students will add target movement to their games}]
+     #:product-outcomes @itemlist[@item{Students will organize similar objects into lists, in order to modify them together}]
      #:exercises (list (make-exercise-locator/dr-assess "Danger-and-Target-Movement" "target-leap-design-recipe-assess" "Making Players Leap")
 		       )
      #:standards (list "F-IF.1-3" "F-LE.5" "BS-DR.2" "BS-DR.3")
-     #:materials @itemlist[@item{Pens/pencils for the students, fresh whiteboard markers for teachers}
+     #:materials @itemlist[@item{Computer for running Alice 3}
                             @item{Student @(resource-link #:path "workbook/StudentWorkbook.pdf" #:label "workbook")}
                             @item{All student computers should have their game templates pre-loaded, with their image files linked in}
                             @item{Class poster (List of rules, language table, course calendar)}
