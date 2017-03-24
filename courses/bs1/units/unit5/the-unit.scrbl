@@ -34,7 +34,7 @@
       ]{
         @points[@point{@student{Hi there! In this assignment, we are going to look at making another Alice world, except this one will introduce you to randomness, and how we can use lists of objects in our worlds to group similar items together. We’ll also introduce you to indexing, which is how we can access an individual object in a list. You’ll also see how a for each and counted loop work. You’ll also get to see how methods (procedures) can be used in Alice worlds to make object be modified, or do things, but also learn why we use methods in Computer Science, and how they can save us lots of time!  
                                 @activity[#:forevidence (list "BS-IDE&1&2" "BS-PL.1&1&2" "BS-PL.2&1&1" "BS-PL.2&1&2" "BS-PL.3&1&3")]{
-                                        First, get started by watching the video of what our Alice world will do, you can find it here(HYPERLINK). As you’re watching it, think about how parts of the video (what the objects are doing) are repetitive, and how maybe, they could be represented in loops. After doing so, fill out the table below: INSERT IMAGE OF TABLE HERE}}
+                                        First, get started by watching the video of what our Alice world will do, you can find it here @(hyperlink "https://drive.google.com/open?id=0B8WPCstkZObFbU52bWlfcDMtdzQ" "here"). As you’re watching it, think about how parts of the video (what the objects are doing) are repetitive, and how maybe, they could be represented in loops. After doing so, fill out the table below:@bitmap{images/objectTable.png}}}
                         @teacher{Make sure students interpret the video correctly, and have an understanding of objects.}
                         }
                  ]}
