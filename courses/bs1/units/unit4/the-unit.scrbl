@@ -251,4 +251,23 @@
 	For each comment, write what topic we used and how it’s being used in the code
 	Example: “Method: timerIncrease. I use this method to increase my timer”}}
                 ]}
+       
+       
+@lesson/studteach[
+     #:title "Extra credit add ending"
+     #:duration "70 minutes"
+     #:overview ""
+     #:learning-objectives @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{As I’m sure you have noticed, we never created an ending to our race! What happens when the timer runs out or when you get all of the objects! This part is entirely up to you.}
+                  @teacher{You can use this part of the project as a review to help solidify everything your students just learned. Encourage them to implement the topics we covered when they create their ending.}}]}
 }
