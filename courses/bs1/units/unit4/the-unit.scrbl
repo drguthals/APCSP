@@ -195,8 +195,8 @@
        
        
 @lesson/studteach[
-     #:title "Closing"
-     #:duration "5 minutes"
+     #:title "Starting the game"
+     #:duration "25 minutes"
      #:overview ""
      #:learning-objectives @itemlist[]
      #:product-outcomes @itemlist[]
@@ -209,10 +209,46 @@
                 @pacing[#:type "challenge"]{@itemlist[@item{}]}
                 )
       ]{
-        @points[@point{@student{In this unit, you started to see how functions are useful in writing animations: functions help produce information (such as the height of a rocket) that are used to create scenes in a game.  With the extra practice writing functions and using the Design Recipe, you are now ready to start writing functions that will move the elements within your own game.}
-                        @teacher{@itemlist[@item{Have students volunteer what they learned in this lesson}
-                                            @item{Reward behaviors that you value: teamwork, note-taking, engagement, etc}
-                                            @item{Pass out exit slips, dismiss, clean up.}]}
-                        }
-                        ]}
+        @points[@point{@student{We need a way so that our timer doesn’t start before the instructions are clicked. We can do this by changing the conditions in the timerDecrease method to depend on more than one thing. Let’s begin by creating a new boolean variable called “gameOn”.}}
+                 @point{@student{Where should we declare our gameOn variable if we have to use it in more than one method?} @teacher{declare it as a global variable in the scene properties}}
+                 @point{@student{Where should we initialize gameOn to true?} @teacher{In mouseClick}}
+                 @point{@student{Declare your gameOn boolean in the scene properties and initialized it to false.}}
+                 @point{@student{In our mouseClick listener, let’s set our gameOn boolean to true}}
+                 @point{@student{Now let’s think about how we can use this boolean value to start the timer. We have a while loop in timerDecrease that runs based on some parameters, if we add this boolean as a condition to that while loop we can have it run ONLY when gameOn is true}}
+                 @point{@student{In your timerDecrease while loop change the parameters so that the condition is BOTH this.timerValue > 0 AND this.gameOn is true}}
+                 @point{@student{Let’s test our code}}
+                 @point{@student{Uh Oh!!! The timer doesn’t start! What’s going on! BUG #4 FILL OUT YOUR WORKBOOK}}
+                 @point{@student{Why doesn’t clicking on the instructions cause the timer to start? Perhaps the boolean isn’t being set to true? Where do we set the boolean to true?} @teacher{In mouseClick}}
+                 @point{@student{Why wouldn’t mouseClick be setting the boolean to true?} @teacher{IT’S IN A DO IN ORDER BLOCK, Let’s add a do TOGETHER block.}}
+                 @point{@student{Why isn’t this working?} @teacher{Ask your students to think about what we could do. This one is tricky so if they get stuck don’t worry. Have them move our do together block that calls the timeDecrease and scoreIncrease methods into our do together block in the mouseClick listener}}
+                 @point{@student{Test your code again! }}
+                 @point{@student{Let’s add one last thing! Our user doesn’t know that they have to click the instructions to start the game! Let’s print some MORE instructions telling them to do so!}}
+                 @point{@student{Add a new text object that says “Click Instructions to Start” and position it in your screen so that it’s visible when we start the game}}
+                 @point{@student{We’re going to need to make THIS disappear when we click, so let’s do the same thing we did with the instructions}}
+                 @point{@student{Add clickToStart’s “setOpacity” procedure into our mouseClick listener}}
+                 @point{@student{Run your code to test its functionality}}
+                ]}
+
+       
+@lesson/studteach[
+     #:title "Commenting Exercise"
+     #:duration "20 minutes"
+     #:overview ""
+     #:learning-objectives @itemlist[]
+     #:product-outcomes @itemlist[]
+     #:standards (list)
+     #:materials @itemlist[]
+     #:preparation @itemlist[]
+     #:pacings (list 
+                @pacing[#:type "remediation"]{@itemlist[@item{}]}
+                @pacing[#:type "misconception"]{@itemlist[@item{}]}
+                @pacing[#:type "challenge"]{@itemlist[@item{}]}
+                )
+      ]{
+        @points[@point{@student{Remember that table we filled out at the beginning? We’re going to go through our code and make comments at each time we used one of the topics listed in it.}}
+                 @point{@student{Making Comments:
+	You can make comments in Alice by dragging the comment variable into code segments
+	For each comment, write what topic we used and how it’s being used in the code
+	Example: “Method: timerIncrease. I use this method to increase my timer”}}
+                ]}
 }
