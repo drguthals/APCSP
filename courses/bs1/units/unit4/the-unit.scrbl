@@ -182,13 +182,13 @@
                 @pacing[#:type "challenge"]{@itemlist[@item{}]}
                 )
       ]{@points[@point{@student{Now that we’ve implemented all the basic functionality of the game, we’re going to create instructions so that users know how to play!}}
-                 @point{@student{Start by creating a new Billboard() named “instructions”}}
+                 @point{@student{Start by creating a new Billboard() named “instructions” @bitmap{images/41.png} @bitmap{images/42.png}}}
                  @point{@student{Import the gameinstructions.bmp file}}
-                 @point{@student{Position your instructions billboard in the middle of the screen and close to the camera.}}
+                 @point{@student{Position your instructions billboard in the middle of the screen and close to the camera. @bitmap{images/43.png}}}
                  @point{@student{Next, we’re going to make it so that the game starts when the instructions are clicked on. We need an event to handle this so let’s add one}}
-                 @point{@student{We’re going to use a mouseclick-listener}}
+                 @point{@student{We’re going to use a mouseclick-listener @bitmap{images/44.png}}}
                  @point{@student{Next, since we want our listener to interact with the instructions, let’s set the mouseclick so that it makes the instructions dissappear}}
-                 @point{@student{We can do this by dragging the instructions’ “setOpacity” procedure into the mouse click listener}}
+                 @point{@student{We can do this by dragging the instructions’ “setOpacity” procedure into the mouse click listener @bitmap{images/45.png}}}
                  @point{@student{Now test your code to make sure that it works.}}
                  @point{@student{Does anything happen that shouldn’t? Perhaps something like a timer starting even though we haven’t clicked on the instructions to start the game? What can we do about this?}}
                 ]}
@@ -212,20 +212,20 @@
         @points[@point{@student{We need a way so that our timer doesn’t start before the instructions are clicked. We can do this by changing the conditions in the timerDecrease method to depend on more than one thing. Let’s begin by creating a new boolean variable called “gameOn”.}}
                  @point{@student{Where should we declare our gameOn variable if we have to use it in more than one method?} @teacher{declare it as a global variable in the scene properties}}
                  @point{@student{Where should we initialize gameOn to true?} @teacher{In mouseClick}}
-                 @point{@student{Declare your gameOn boolean in the scene properties and initialized it to false.}}
-                 @point{@student{In our mouseClick listener, let’s set our gameOn boolean to true}}
+                 @point{@student{Declare your gameOn boolean in the scene properties and initialized it to false. @bitmap{images/46.png}}}
+                 @point{@student{In our mouseClick listener, let’s set our gameOn boolean to true @bitmap{images/47.png}}}
                  @point{@student{Now let’s think about how we can use this boolean value to start the timer. We have a while loop in timerDecrease that runs based on some parameters, if we add this boolean as a condition to that while loop we can have it run ONLY when gameOn is true}}
-                 @point{@student{In your timerDecrease while loop change the parameters so that the condition is BOTH this.timerValue > 0 AND this.gameOn is true}}
+                 @point{@student{In your timerDecrease while loop change the parameters so that the condition is BOTH this.timerValue > 0 AND this.gameOn is true @bitmap{images/48.png}}}
                  @point{@student{Let’s test our code}}
                  @point{@student{Uh Oh!!! The timer doesn’t start! What’s going on! BUG #4 FILL OUT YOUR WORKBOOK}}
                  @point{@student{Why doesn’t clicking on the instructions cause the timer to start? Perhaps the boolean isn’t being set to true? Where do we set the boolean to true?} @teacher{In mouseClick}}
                  @point{@student{Why wouldn’t mouseClick be setting the boolean to true?} @teacher{IT’S IN A DO IN ORDER BLOCK, Let’s add a do TOGETHER block.}}
-                 @point{@student{Why isn’t this working?} @teacher{Ask your students to think about what we could do. This one is tricky so if they get stuck don’t worry. Have them move our do together block that calls the timeDecrease and scoreIncrease methods into our do together block in the mouseClick listener}}
+                 @point{@student{Why isn’t this working?} @teacher{Ask your students to think about what we could do. This one is tricky so if they get stuck don’t worry. Have them move our do together block that calls the timeDecrease and scoreIncrease methods into our do together block in the mouseClick listener @bitmap{images/49.png} @bitmap{images/50.png}}}
                  @point{@student{Test your code again! }}
                  @point{@student{Let’s add one last thing! Our user doesn’t know that they have to click the instructions to start the game! Let’s print some MORE instructions telling them to do so!}}
-                 @point{@student{Add a new text object that says “Click Instructions to Start” and position it in your screen so that it’s visible when we start the game}}
+                 @point{@student{Add a new text object that says “Click Instructions to Start” and position it in your screen so that it’s visible when we start the game @bitmap{images/51.png} @bitmap{images/52.png}}}
                  @point{@student{We’re going to need to make THIS disappear when we click, so let’s do the same thing we did with the instructions}}
-                 @point{@student{Add clickToStart’s “setOpacity” procedure into our mouseClick listener}}
+                 @point{@student{Add clickToStart’s “setOpacity” procedure into our mouseClick listener @bitmap{images/53.png}}}
                  @point{@student{Run your code to test its functionality}}
                 ]}
 
