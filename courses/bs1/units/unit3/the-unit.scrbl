@@ -241,6 +241,41 @@ Global variables: Declared in the class. These are accessible by anything within
                  @point{@student{Position your score into the upper left corner of the screen like such:}}
                  @point{@student{We want our score to follow the boat just like our timer and camera do, so what should we do?}
                          @teacher{Change the score’s vehicle to this.woodenboat}}
-                        ]}
+                @point{@student{Now we need to make a method that alters our score! This will be a little similar to our timerDecrease method. Because we want our points to INCREASE, let’s go ahead and make a new method called “scoreIncrease”}}
+                @point{@student{We only want our score to increase WHILE there is still time on the clock, so let’s go ahead and use a while loop.}}
+                @point{@student{Drag a while loop into your scoreIncrease method and initialize it to true}}
+                @point{@student{Change the while loop condition to only execute while timerValue is greater than or equal to zero.}}
+                @point{@student{We want our method to increase everytime we pass through one of our objects, so we’re going to need to make them into a list.}}
+                @point{@student{Start by dragging a “for each in” into our while loop}}
+                @point{@student{Under “item type” select “Gallery Class” }}
+                @point{@student{Then, in our gallery class, select the object you used for your course.}}
+                @point{@student{Back in our for each prompt, select “array” and choose “custom array”}}
+                @point{@student{Start adding your objects to the array}}
+                @point{@student{When you’ve added all your objects select “ok”}}
+                @point{@student{Now we want our score to increase every time we pass through one of our objects. }}
+                @point{@student{Add an if statement to our for each loop and initialize it to true.}}
+                @point{@student{Next, change the condition of the if statement to be less than (For now you can choose any two random numbers, we’ll be changing them later.)}}
+                @point{@student{In our this.woodenBoat functions, there is a function to get the distance from the boat to another object, let’s drag that into our if statement condition and then select the array we just made.
+}}
+                @point{@student{Then change the distance to be less than 1}}
+                @point{@student{Similarly to our timer, we need a global variable that keeps track of our score. Just like you made timerValue, make a new variable that is a WholeNumber, named “scoreValue”, and initialize it to 0
+}}
+                @point{@student{Back in our if statement in our scoreIncrease method, we’re going to add a “setScoreValue” procedure and set it to “this.scoreValue” when prompted.}}
+                @point{@student{Next, click on “this.scoreValue”. In the drop down menus, we’re going increment the value by one. (similar to how we decremented our timer by one)}}
+                @point{@student{Now, just like with the timer, we’re going to change the score object’s value to match scoreValue’s value.}}
+                @point{@student{Under this.score’s procedures, drag the setvalue procedure into our if statement and set it equal to a blank string. Then, add scoreValue.}}
+                @point{@student{Remember when we tried to run our code after finishing the timerDecrease method? It didn’t work because we didn’t add it to our event listener. Go ahead and add it to our sceneActivationListener.}}
+                @point{@student{Try running your code and steering the boat up to an object.}}
+                @point{@student{@activity{BUG #3 Uh oh! Our score isn’t increasing! Let’s take a moment to debug our code, go to the debuggin table listed on @worksheet-link[#:name "Translating-to-Algebra"].}}}
+                @point{@student{What do you think could be wrong? I’ll give you a hint, it’s something in our event listeners.. But what?}
+                       @teacher{Take a moment to discuss the functionality of our code. What should all be happening at the same time?}}
+                @point{@student{} @teacher{Our timer and score should be changing TOGETHER at the same time, but our event listener is using a do in order loop. Change it to a do together loop.}}
+                @point{@student{Try running your code again and driving up to an object. WOAH! What’s up with our score!}}
+                @point{@student{@activity{Uh oh! Another bug! Go to @worksheet-link[#:name "Translating-to-Algebra"] in your workbook.}}}
+                @point{@student{Our score should be incrementing by one when we drive through an object, what could be wrong? Hint: it’s a problem with our scoreIncrease method. Let’s look in there.}}
+                @point{@student{} @teacher{The problem is that since we’re using a while loop, as long as we’re within our set distance from an object the score will continue to increase immediately. What can we do to delay the time it takes to increment the score?}}
+                @point{@student{} @teacher{Add a delay procedure for 1.5 seconds to our if statement.}}
+                @point{@student{You’re done with the score!}}
+                ]}
 }
 
