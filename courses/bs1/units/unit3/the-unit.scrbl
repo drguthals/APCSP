@@ -188,7 +188,7 @@ Global variables: Declared in the class. These are accessible by anything within
 
 @lesson/studteach[
      #:title "Steering the Boat"
-     #:duration "30 minutes"
+     #:duration "15 minutes"
      #:overview ""
      #:learning-objectives @itemlist[]
      #:evidence-statements @itemlist[]
@@ -202,26 +202,27 @@ Global variables: Declared in the class. These are accessible by anything within
                 @pacing[#:type "misconception"]{@itemlist[@item{}]}
                 @pacing[#:type "challenge"]{@itemlist[@item{}]}
                 )
-      ]{@points[@point{@student{You've seen many functions defined in Racket, for example: 
-                                @code{(define (f x) (+ x 1))}
-                        @activity[#:forevidence (list  "F-IF.1-3&1&2" "F-IF.1-3&1&4" "F-IF.4-6&1&1")]{@itemlist[@item{What is the name of this function?}
-                                             @item{How many variables does it take?}
-                                             @item{What is the name of the variable(s)?}
-                                             @item{What does this function do to the variable @code{x}?}
-                                             @item{Define a function @code{g}, which takes in a variable @code{q} and multiplies it by 20.}]}}
-                        @teacher{Make sure students understand that the function is named @italic{f}, and not "fx" or "f of x". Have students practice other function definitions, to make sure they're comfortable translating a verbal description into Racket syntax.}
-                        }
-                 @point{@student{To translate these functions into algebra, we do something similar to what we did with the values. Here is the same function @code{f}, written in algebra syntax: @math{f(x) = x + 1}                                                                                                      @activity{Translate the function @code{g} into algebra, using the translation of @code{f} as a model. Once that is complete try defining a function @math{h}, which takes in a variable @code{x} and divides it by 2.}}
-                         @teacher{Have students practice this translation with a few other functions, again translating from a verbal description (rather than Racket syntax).}}
-                 @point{@student{@activity{Translate the rest of the functions, listed on @worksheet-link[#:name "Translating-to-Algebra"] of your workbook.}}
-                         @teacher{}
-                         }]
+      ]{@points[@point{@student{In order to test our timer (and race our boat) we’re going to need a way to control it. We can use event handlers to connect input from the keyboard to move our boat.}}
+                 @point{@student{In our “initializeEventListeners” method, click “add event listener”, in the drop down menu, select “keyboard”, “addObjectMoveFor”, and then “this.woodenBoat”}
+                  @teacher{The forward and backwards controls will be inverted.}}
+                 @point{@student{Try running your code! What happens?}
+                         @teacher{Why doesn’t the camera follow the boat around? And more importantly, why isn’t our beautiful timer that we just made not counting down?}}
+                   @point{@student{@activity{BUG #1: fill out the table in your workbook, listed on @worksheet-link[#:name "Translating-to-Algebra"].}}}
+                   @point{@student{}
+                   @teacher{In setup scene, select the camera and change the vehicle to “this.woodenBoat”}}
+                   @point{@student{If you try running the scene, the camera follows the boat around, but the timer still isn’t changing.. Why is this?}
+                           @student{@activity{Let's go back to our bug table, listed on @worksheet-link[#:name "Translating-to-Algebra"].}}
+                           @teacher{It's because we never call on the timerDecrease method}}
+                   @point{@student{Let’s check our event listener method and look for a problem there.}
+                           @teacher{Have your students switch from this.timer to this so that we can access our methods, and add our timerDecrease method to the sceneActivationListener}}
+                   
+                   ]
          }
                  
                  
 @lesson/studteach[
-     #:title "Closing"
-     #:duration "5 minutes"
+     #:title "Making a Score"
+     #:duration "40 minutes "
      #:overview ""
      #:learning-objectives @itemlist[]
      #:evidence-statements @itemlist[]
@@ -235,11 +236,11 @@ Global variables: Declared in the class. These are accessible by anything within
                 @pacing[#:type "challenge"]{@itemlist[@item{}]}
                 )
       ]{
-        @points[@point{@student{In this unit, you learned how to name values and define functions.  You will use named values to provide images for your game elements.  You will use functions to make your game elements move.  As you will see soon, functions are critical to making games.  You'll do a bit more practice with them in the next unit, including writing your first function that makes something move across the screen.}
-                        @teacher{@itemlist[@item{Have students volunteer what they learned in this lesson}
-                                            @item{Reward behaviors that you value: teamwork, note-taking, engagement, etc}
-                                            @item{Pass out exit slips, dismiss, clean up.}]}
-                        }
+        @points[@point{@student{In this part of our project, we’re going to create a way to keep track of all of the objects our boat moves through.}}
+                 @point{@student{Let’s start by adding another textModel, named “score” and initialized to 0.}}
+                 @point{@student{Position your score into the upper left corner of the screen like such:}}
+                 @point{@student{We want our score to follow the boat just like our timer and camera do, so what should we do?}
+                         @teacher{Change the score’s vehicle to this.woodenboat}}
                         ]}
 }
 
