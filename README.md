@@ -35,7 +35,7 @@ And undergrads
   ```
   Add this line to the .bash_profile file: 
   ```
-  export PATH="/Applications/Racket v6.8/bin:$PATH
+  export PATH="/Applications/Racket v6.8/bin:$PATH"
   ```
   Then re-load the .bash_profile:
   ```
