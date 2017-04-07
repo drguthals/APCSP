@@ -109,6 +109,13 @@ $ racket build.rkt
 From then on, if you are not making edits to the workbook, you shouldn't have to build the workbook.
 
 # Making Changes
+## Branch First!
+Before making changes you should make your own branch from the development branch.
+```
+$ git checkout development
+$ git checkout -b yourBranchName
+```
+
 ## Changing a Unit to Have Different Text
 One of the easiest changes to make is to change a unit from Algebra to CS content. If you want to update the text to Unit 1, you have to change the ```the-unit.scrbl``` file found here:
 ```
@@ -135,17 +142,34 @@ codemirror.js		pict_10.png		pict_17.png		pict_6.png		scheme2.js
 ```
 From there, you can open index.html and you will see the changes you made!
 
-# Pushing Your Changes to the Repository
-## Development Process
-1. Branch from Development
-2. Make your changes on your branch
-3. Pull from Development
-4. Push to your branch
-5. Pull request from your branch into Development
-6. Sarah approves merge from your Branch into Development every Monday at 5pm
-7. Test Development Tuesday
-8. Sarah approves merge from Development into Master on Wednesdays at 11am when needed
-9. Test on Master until Thursdays at 11am when needed
+## Pushing Your Changes to your Branch
+After you have made some changes, you should push to your branch:
+```
+$ git add .
+$ git commit -m "The changes you've made"
+$ git pull origin development
+$ git push origin yourBranchName
+```
+*Note: You should pull from development before pushing to your branch to make sure there are no conflicts. 
+
+## Merging Your CHanges to Development
+After you have made substantial changes (or every Monday at 4pm) you should do a Pull Request into development. First, make sure you have pushed all of your changes to your branch. Follow steps above and double check by running:
+```
+$ git status
+On branch development
+nothing to commit, working tree clean
+$
+```
+Then you should go onto GitHub, and go to the Repostory and click "Create New Pull Request":
+![PullRequest1](https://raw.githubusercontent.com/sguthals/APCSP/master/PullRequest1.png?token=ABQN7ZvkagA1RAcdpMrg_Zx6kNFdY0ZOks5Y8RJ4wA%3D%3D)
+
+Make sure that the base is development and the compare is your branch (clara in this example):
+![PullRequest2](https://raw.githubusercontent.com/sguthals/APCSP/master/PullRequest2.png?token=ABQN7aawhEfRNt_ItIE5rJbw6sihWjpOks5Y8RKZwA%3D%3D)
+
+Do this by Mondays at 5pm. Then Sarah will accept your merge, and you will have until Wednesdays at 11am to test all of the changes on the development branch. (Hosting TBA).
+
+# Pushing Your Changes to the Master
+If needed, Sarah approves merge from Development into Master on Wednesdays at 11am and testing of the master branch should be complete by Thursdays at 11am.
 
 ---
 # From the original Bootstrap README
