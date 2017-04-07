@@ -135,6 +135,18 @@ codemirror.js		pict_10.png		pict_17.png		pict_6.png		scheme2.js
 ```
 From there, you can open index.html and you will see the changes you made!
 
+# Pushing Your Changes to the Repository
+## Development Process
+1. Branch from Development
+2. Make your changes on your branch
+3. Pull from Development
+4. Push to your branch
+5. Pull request from your branch into Development
+6. Sarah approves merge from your Branch into Development every Monday at 5pm
+7. Test Development Tuesday
+8. Sarah approves merge from Development into Master on Wednesdays at 11am when needed
+9. Test on Master until Thursdays at 11am when needed
+
 ---
 # From the original Bootstrap README
 The following contributors worked on converting the original Bootstrap material in the
