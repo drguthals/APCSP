@@ -1,6 +1,7 @@
 #lang APCSP/lib
 
-@title{Recreating a Movie with Objects and Procedures}
+
+@title{Unit 1:Intro To CS Principles Videogames and Coordinate Planes}
 
 @declare-tags[]
 
@@ -29,9 +30,7 @@
                      @teacher{}
                      }
 
-		@point{@student{To get started, you'll watch a video of someone explaining how they approach recreating a video, and you'll get to see the first few lines of code that make up the video. Additionally, we'll provide you with the starter world for this video, i.e. the objects will have already been added to the scene, so all you have to do is add the code. Don't be afraid to try something even if, especially if, you're not sure it will work. Many of the correct values for parameters are not immediately obvious, and WILL require trial and error to figure out. Run your code often to check that it does what you expect and want it to, that is, match the video! Finally, do NOT forget to save! It takes very little time and will save you a lot of time and frustration if something happens and you lose your work. With that being said, watch the video below to get started.}
-			@teacher{This part is optional. It gives the students a more in-depth overview of what exactly they will be doing as well as provides helpful tips on how to approach each part of the project. You may use all, part, or none of it as you see fit}
-	}
+            @point{@student{ This is a test of editing bootstrap}}
               ]
          }
 
