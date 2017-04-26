@@ -692,7 +692,12 @@
                 (br)
                 (input (@ (type "button")
                           (value "Slides")
-                          (onclick "showSlides()")))))]
+                          (onclick "showSlides()")))
+                (br)
+                (input (@ (type "button")
+                          (value "Show Pedagogy")
+                          (onclick "pedagogy(this)")))
+                ))]
    [else (elem)]))
 
 (define (insert-student-buttons)
