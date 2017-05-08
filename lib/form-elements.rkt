@@ -93,6 +93,7 @@
          point
          student
          teacher
+         pedagogy
          itemlist/splicing ;; need because bs1 teachers-guide.scrbl using it (still in old lesson format)
          activity
          csp-activity
@@ -156,6 +157,7 @@
 (define bs-callout-style (bootstrap-div-style "callout"))
 (define bs-student-style (bootstrap-div-style "student"))
 (define bs-teacher-style (bootstrap-div-style "teacher"))
+(define bs-pedagogy-style (bootstrap-div-style "pedagogy"))
 (define bs-logo-style (bootstrap-span-style "BootstrapLogo"))
 (define bs-vocab-style (bootstrap-span-style "vocab"))
 (define bs-banner-style (bootstrap-div-style "banner"))
@@ -198,6 +200,9 @@
 (define (teacher . content)
   (nested #:style bs-teacher-style (interleave-parbreaks/select content)))
 
+(define (pedagogy . content)
+  (nested #:style bs-teacher-style (interleave-parbreaks/select content)))
+
 (define (pacing #:type (type #f) . contents) 
   (nested #:style (bootstrap-span-style type)
           (nested #:style bs-callout-style (interleave-parbreaks/all contents))))
@@ -206,7 +211,8 @@
    (apply itemlist/splicing contents #:style (make-style "lesson" '(compact))))
 
 (define (point . contents)
-  (interleave-parbreaks/select contents)) 
+  (interleave-parbreaks/select contents))
+
 
 ;auto generates copyright section
 (define (copyright . body)

@@ -125,7 +125,7 @@
       (and (nested-flow? content) 
            (nested-flow-style content)
            (member (style-name (nested-flow-style content)) 
-                   (list "student" "teacher" "activity")))
+                   (list "student" "teacher" "activity" "pedagogy")))
       ))
 
 ;; Avoid Sintraparas from being introduced by adding manual parbreaks between

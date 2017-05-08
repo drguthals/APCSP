@@ -26,8 +26,10 @@
  ]{
   @points[@point{@student{In this activity you will be learning about many new programming techniques! Before we start let’s turn to @worksheet-link[#:name "Translating-to-Algebra"] in your notebook. 
               @activity["There is a table of topics we will be covering in the next two assignments. Fill out the table."
-                        @bitmap{images/table of topics - introduction.png}]}}
-             ]}
+                        @bitmap{images/table of topics - introduction.png}]}
+            @pedagogy{WTF}}                               
+             ]
+}
 
        
  @lesson/studteach[
@@ -43,12 +45,10 @@
  #:prerequisites (list)
  #:pacings (list)
  ]{
-  @points[@point{@student{This movie shows the finished version of the project you are about to begin. Let’s dissect the video and think about what’s going on in it.}
-             @teacher{}}
-          @point{@student{Let’s begin by writing down all of the objects we see in the beginning of the video. List all of them. Here’s a screenshot: @bitmap{images/1.png}
-             }
-            }
+  @points[@point{@student{This movie shows the finished version of the project you are about to begin. Let’s dissect the video and think about what’s going on in it.}}
+          @point{@student{Let’s begin by writing down all of the objects we see in the beginning of the video. List all of them. Here’s a screenshot: @bitmap{images/1.png}}}
           @point{@student{@activity["Fill out this table with SIX objects you see."
+                                     
                                     @bitmap{images/six objects - watching a movie.png}]}
              @teacher{The text blocks count as objects.}
             }
