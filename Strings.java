@@ -1,4 +1,11 @@
 
+/**
+ * This class contains the skeleton of a .scrbl file split up into 
+ * 	strings that come between user entered input
+ * These strings are used in the CopyPaste program to print to a 
+ * 	.scrbl file and allow it to be compiled without interacting 
+ * 	directly with all its quirks and annoyances
+ */
 
 public class Strings {
 
