@@ -702,7 +702,7 @@
                 (br)
                 (input (@ (type "button")
                           (value "Show Pedagogy")
-                          (onclick "pedagogy(this)")))
+                          (onclick "pedagogy(this);")) "")
                 ))]
    [else (elem)]))
 
