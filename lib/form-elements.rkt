@@ -201,7 +201,7 @@
   (nested #:style bs-teacher-style (interleave-parbreaks/select content)))
 
 (define (pedagogy . content)
-  (nested #:style bs-teacher-style (interleave-parbreaks/select content)))
+  (nested #:style bs-pedagogy-style (interleave-parbreaks/select content)))
 
 (define (pacing #:type (type #f) . contents) 
   (nested #:style (bootstrap-span-style type)
