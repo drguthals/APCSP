@@ -205,7 +205,7 @@ input#toggle{display:none;}
 
 
 div.ExtraExercises, div.segment{
-  overflow:   visible;
+  overflow:   hidden;
   border-right: solid 1px gray;
   font-size: 14px;
 }
@@ -296,7 +296,7 @@ div.pedagogy{
     vertical-align: top;
     padding-left:   .05in;
     padding-right:  .05in;
-    margin-left:    3.9in;
+    margin-left:    .1in;
     border-left:    1pt solid black;
     background:     #F0EFEE;
     padding-bottom: 32767px;
@@ -311,8 +311,12 @@ div.student{
 }
 
 ul.teacherNotes li div.student{width: 4.4in;}
+ul.teacherNotes li div.teacher{visibility: visible;}
+ul.teacherNotes li div.pedagogy{visibility: hidden;}
 
 ul.pedagogyNotes li div.student{width: 4.4in;}
+ul.pedagogyNotes li div.pedagogy{visibility: visible;}
+ul.pedagogyNotes li div.teacher{visibility: hidden;}
 
 /* show lists normally inside a lessonItem, verticall-center their contents */
 li.lessonItem li{
@@ -324,7 +328,7 @@ li.lessonItem li{
 
 .teacher ul{padding-left: 5px;}
 
-.pedagogy ul{padding-left: 10px;}
+.pedagogy ul{padding-left: 5px;}
 
 
 /* embedded WeSchemes should be full-width, and transform during animation */
