@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.PrintWriter;
 import java.io.IOException;
+import java.util.*;
 
 public class CopyPasteGUI extends Strings implements ActionListener{
 
@@ -37,8 +38,13 @@ public class CopyPasteGUI extends Strings implements ActionListener{
 	private JTextField unit;
 	private JTextField name;
 	private JTextArea description;
-
-
+	private ArrayList<String> lessons = new ArrayList<String>();
+	private JPanel studentPoint;
+	private JPanel teacherPoint;
+	private JTextArea student;
+	private JTextArea teacher;
+	private JPanel returnFromPoints;
+	private ArrayList<String> points = new ArrayList<String>();
 	public CopyPasteGUI(){
 		createGUI();
 	}
@@ -59,6 +65,8 @@ public class CopyPasteGUI extends Strings implements ActionListener{
 		lessonOverview = new JPanel();
 		lessonButtons = new JPanel();
 		returnFromLesson = new JPanel();
+		studentPoint = new JPanel();
+		teacherPoint = new JPanel();
 
 		choose = new JPanel();
 		choose.setOpaque(true);
@@ -94,12 +102,12 @@ public class CopyPasteGUI extends Strings implements ActionListener{
 			creating = false;
 			addToUnit();
 		} else if(e.getActionCommand().equals("done")){
-			choose.setVisible(false);
 			chooseCourse.setVisible(false);
 			chooseUnit.setVisible(false);
 			chooseUnitName.setVisible(false);
 			chooseUnitDescription.setVisible(false);
-			buttons.setVisible(false);	
+			buttons.setVisible(false);
+			label.setText("the-unit.scrbl file has been created!");	
 			createFile();
 		} else if(e.getActionCommand().equals("lesson")){
 			label.setText("Creating New Lesson");
@@ -112,6 +120,39 @@ public class CopyPasteGUI extends Strings implements ActionListener{
 		} else if(e.getActionCommand().equals("finish")){
 			handleLessonExit();
 			recordLesson();
+		} else if(e.getActionCommand().equals("points")){
+			label.setText("Creating New Point");
+			lessonName.setVisible(false);
+			lessonDuration.setVisible(false);
+			lessonOverview.setVisible(false);
+			lessonButtons.setVisible(false);
+			returnFromLesson.setVisible(false);
+			setupPoints();
+		} else if(e.getActionCommand().equals("finis")){
+			label.setText("Creating New Lesson");
+			studentPoint.setVisible(false);
+			teacherPoint.setVisible(false);
+			returnFromPoints.setVisible(false);
+			lessonName.setVisible(true);
+			lessonDuration.setVisible(true);
+			lessonOverview.setVisible(true);
+			lessonButtons.setVisible(true);
+			returnFromLesson.setVisible(true);
+			recordPoint();	
+		} else if(e.getActionCommand().equals("nouveau")){
+			studentPoint.setVisible(false);
+			teacherPoint.setVisible(false);
+			returnFromPoints.setVisible(false);
+			recordPoint();
+			setupPoints();
+		} else if(e.getActionCommand().equals("new")){
+			recordLesson();
+			lessonName.setVisible(false);
+			lessonDuration.setVisible(false);
+			lessonOverview.setVisible(false);
+			lessonButtons.setVisible(false);
+			returnFromLesson.setVisible(false);
+			addLesson();
 		}
 		create.setVisible(false);
 		add.setVisible(false);
@@ -268,10 +309,15 @@ public class CopyPasteGUI extends Strings implements ActionListener{
 	public void returnToUnit(){
 		returnFromLesson = new JPanel();
 		JButton finish = new JButton("Done");
+		JButton add = new JButton("Add Another Lesson");
+
 		finish.addActionListener(this);
 		finish.setActionCommand("finish");
+		add.addActionListener(this);
+		add.setActionCommand("new");
 		
 		returnFromLesson.add(finish);
+		returnFromLesson.add(add);
 		frame.getContentPane().add(returnFromLesson);
 	}
 
@@ -295,6 +341,18 @@ public class CopyPasteGUI extends Strings implements ActionListener{
 		String title = lessonTitle.getText();
 		String duration = lessonTiming.getText();
 		String overview = lessonDescription.getText();
+		String lessonEncoding = Strings.lessonOpen + Strings.lessonTitle + title + lessonTitleEnd + 
+			Strings.lessonDuration + duration + lessonDurationEnd + Strings.lessonOverview + 
+			overview + lessonOverviewEnd + lessonObjectivesStart + lessonObjectivesEnd + 
+			lessonEvidenceStart + lessonEvidenceEnd + lessonOutcomesStart + lessonOutcomesEnd +
+			lessonStandardsStart + lessonStandardsEnd + lessonMaterialsStart + lessonMaterialsEnd 
+			+ lessonPreparationStart + lessonPreparationEnd;
+		for(int i = 0; i < points.size(); i++){
+			System.out.println("hi");
+			lessonEncoding += points.get(i);
+		}
+		lessonEncoding += closeLessonPoints;
+		lessons.add(lessonEncoding);
 	}
 
 	public void createFile(){
@@ -333,8 +391,51 @@ public class CopyPasteGUI extends Strings implements ActionListener{
 	
 	}
 
-	public void printLessons(PrintWriter file){
+	public void setupPoints(){
+		points = new ArrayList<String>();
 
+		studentPoint = new JPanel();
+		teacherPoint = new JPanel();
+		returnFromPoints = new JPanel();
+
+		student = new JTextArea(10, 25);
+		teacher = new JTextArea(10, 25);
+
+		JLabel stud = new JLabel("Enter Student Point:");
+		JLabel teach = new JLabel("Enter Corresponding Teacher Point (optional):");
+
+		JButton done = new JButton("Done");
+		JButton add = new JButton("Add Another Point");
+
+		done.addActionListener(this);
+		add.addActionListener(this);
+
+		done.setActionCommand("finis");
+		add.setActionCommand("nouveau");
+
+		studentPoint.add(stud);
+		studentPoint.add(student);
+		teacherPoint.add(teach);
+		teacherPoint.add(teacher);
+		returnFromPoints.add(done);
+		returnFromPoints.add(add);
+
+		frame.getContentPane().add(studentPoint);
+		frame.getContentPane().add(teacherPoint);
+		frame.getContentPane().add(returnFromPoints);
+	}
+
+	public void printLessons(PrintWriter file){
+		for(int i = 0; i < lessons.size(); i++){	
+			file.print(lessons.get(i));
+		}
+	}
+
+	public void recordPoint(){
+		String stud = student.getText();
+		String teach = teacher.getText();
+		String point = openNewPoint + stud + openTeacherPart + teach + closePoint;
+		points.add(point);
 	}
 
 	public static void main(String[] args){
