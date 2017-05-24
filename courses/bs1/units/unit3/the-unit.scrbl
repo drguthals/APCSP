@@ -26,8 +26,7 @@
  ]{
   @points[@point{@student{In this activity you will be learning about many new programming techniques! Before we start let’s turn to @worksheet-link[#:name "Translating-to-Algebra"] in your notebook. 
               @activity["There is a table of topics we will be covering in the next two assignments. Fill out the table."
-                        @bitmap{images/table of topics - introduction.png}]}
-            @pedagogy{WTF}}                               
+                        @bitmap{images/table of topics - introduction.png}]}}                               
              ]
 }
 
