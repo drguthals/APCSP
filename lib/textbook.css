@@ -188,7 +188,7 @@ ul.todo li {list-style-image: url('images/box.gif');}
 table.bordered {
   border-collapse: collapse;
 	border:       solid 1px black;
-	background:		white; 
+	background:		white;
 	margin-left:	0px;
 	font-size:		12px;
 }
@@ -202,7 +202,6 @@ tr.position{color:orange}
 input#prev{display:none;}
 input#next{display:none;}
 input#toggle{display:none;}
-
 
 
 div.ExtraExercises, div.segment{
@@ -264,7 +263,7 @@ span.challenge>div:before{content: 'Moving ahead...'}
 */
 
 li.lessonItem{
-  width:          10.4in;
+  width:          13.2in;
   vertical-align: top;
   overflow:       hidden;
   position:       relative;
@@ -287,14 +286,37 @@ div.teacher{
   background:     #F0EFEE;
   padding-bottom: 32767px;
   margin-bottom: -32767px;
+  visibility:   visible;
 }
+
+div.pedagogy{
+    width:          2.6in;
+    display:        inline-block;
+    height:         auto;
+    vertical-align: top;
+    padding-left:   .05in;
+    padding-right:  .05in;
+    margin-left:    .1in;
+    border-left:    1pt solid black;
+    background:     #F0EFEE;
+    padding-bottom: 32767px;
+    margin-bottom: -32767px;
+    visibility:     visible;
+}
+
 div.student{
   width:          7.3in;
   display:        inline-block;
   padding:        .1in;
 }
-ul.teacherNotes li div.student{width: 4.5in;}
-ul.teacherNotes .embedded-wescheme{width: 4.4in;}
+
+ul.teacherNotes li div.student{width: 4.4in;}
+ul.teacherNotes li div.teacher{visibility: visible;}
+ul.teacherNotes li div.pedagogy{visibility: hidden;}
+
+ul.pedagogyNotes li div.student{width: 4.4in;}
+ul.pedagogyNotes li div.pedagogy{visibility: visible;}
+ul.pedagogyNotes li div.teacher{visibility: hidden;}
 
 /* show lists normally inside a lessonItem, verticall-center their contents */
 li.lessonItem li{
@@ -305,6 +327,8 @@ li.lessonItem li{
 }
 
 .teacher ul{padding-left: 5px;}
+
+.pedagogy ul{padding-left: 5px;}
 
 
 /* embedded WeSchemes should be full-width, and transform during animation */
@@ -395,6 +419,9 @@ div#copyright{
 
 ul.EvidenceStatementsList,
 ul.teacherNotes li div.teacher,
+
+ul.pedagogyNotes li div.pedagogy,
+
 div.student,
 .embedded-wescheme,
 iframe#forum_embed,
@@ -436,6 +463,9 @@ iframe#forum_embed.shown{
  */
 
 ul.teacherNotes li div.student.slide{ width: 90%; }
+
+ul.pedagogyNotes li div.student.slide{ width: 90%; }
+
 .lessonItem .slide{
   position: fixed;
   top:      0px;
@@ -447,6 +477,7 @@ ul.teacherNotes li div.student.slide{ width: 90%; }
   visibility: visible;
   overflow:  hidden;
 }
+
 
 .lessonItem .slide,
 .lessonItem .slide .editbox,
@@ -499,6 +530,10 @@ ul.teacherNotes li div.student.slide{ width: 90%; }
   table.bordered td {padding: 0px;}
   li.lessonItem>*:first-child {padding-bottom: 10px;}
   div.teacher{border-left: solid 1px gray; font-style: italic;}
+  
+  div.pedagogy{border-left: solid 1px gray; font-style: italic;}
+  
+  
   .CodeMirror{font-size: 12px;}
   
   /* For the printed page, make it clear that this is an actual link, not underlined text */
