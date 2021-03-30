@@ -18,7 +18,7 @@ And undergrads
    
    Ubuntu: https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu-14.04/
 
-3. `git clone git@github.com:sguthals/APCSP.git` (Can take a few minutes)
+3. `git clone git@github.com:drguthals/APCSP.git` (Can take a few minutes)
 
    *Note: You may need to run it with sudo*
   
@@ -161,10 +161,10 @@ nothing to commit, working tree clean
 $
 ```
 Then you should go onto GitHub, and go to the Repostory and click "Create New Pull Request":
-![PullRequest1](https://raw.githubusercontent.com/sguthals/APCSP/master/PullRequest1.png?token=ABQN7ZvkagA1RAcdpMrg_Zx6kNFdY0ZOks5Y8RJ4wA%3D%3D)
+![PullRequest1](https://raw.githubusercontent.com/drguthals/APCSP/master/PullRequest1.png?token=ABQN7ZvkagA1RAcdpMrg_Zx6kNFdY0ZOks5Y8RJ4wA%3D%3D)
 
 Make sure that the base is development and the compare is your branch (clara in this example):
-![PullRequest2](https://raw.githubusercontent.com/sguthals/APCSP/master/PullRequest2.png?token=ABQN7aawhEfRNt_ItIE5rJbw6sihWjpOks5Y8RKZwA%3D%3D)
+![PullRequest2](https://raw.githubusercontent.com/drguthals/APCSP/master/PullRequest2.png?token=ABQN7aawhEfRNt_ItIE5rJbw6sihWjpOks5Y8RKZwA%3D%3D)
 
 Do this by Mondays at 5pm. Then Sarah will accept your merge, and you will have until Wednesdays at 11am to test all of the changes on the development branch. (Hosting TBA).
 
