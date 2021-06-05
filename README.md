@@ -205,7 +205,7 @@ Under DrRacket, you can change your Language settings to include the tags as cus
 
 ## Installing Octokit
 ### For Windows
-1. Go to: https://www.visualstudio.com/downloads/
+1. Go to: https://www.visualstudio.com/downloads/?WT.mc_id=academic-0000-sguthals
 2. Download and install Microsoft Visual Studio. Follow the installation steps.
 3. Once installed, in the package selection window, select .NET extension packages. Ignore the Mobile and Gaming extensions since there is no need for them.
 4. Create your project using .NETFramework, Version 4.5 or .NETCore, Version 4.5.1. Octokit is only compatible with these versions.
